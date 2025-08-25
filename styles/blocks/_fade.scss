@@ -1,0 +1,7 @@
+@use "../helpers/index" as *;
+
+.fade {
+    background: linear-gradient(transparent, #fcfcfc);
+
+    pointer-events: none;
+}

@@ -1,0 +1,64 @@
+@use "../helpers/index" as *;
+
+.link-icon {
+  --linkIconInnerGap: 10px;
+  
+  @include hover(innerElements) {
+    .link-icon__inner-label {
+      color: var(--color-light-orange);
+    }
+
+    .link-icon__inner-icon {
+      fill: var(--color-blue);
+    }
+
+    .link-icon__inner-icon--stroke {
+      fill: none;
+      stroke: var(--color-blue);
+    }
+
+    .link-icon__inner-icon--hover-bg {
+      fill: none;
+      stroke: none;
+      background-color: var(--color-blue);
+    }
+
+    .link-icon__inner-icon--light-orange {
+      color: var(--color-blue);
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    @include flex-center;
+    column-gap: var(--linkIconInnerGap);
+  
+    fill: var(--color-light-orange);
+
+    &-icon {
+      fill: var(--color-light-orange);
+
+      color: var(--color-pale-blue);
+
+      transition-duration: var(--transition-duration);
+
+      &--stroke {
+        fill: none;
+        stroke: var(--color-light-orange);
+      }
+
+      &--light-orange {
+        color: var(--color-light-orange);
+      }
+    }
+
+    &-label {
+      transition-duration: var(--transition-duration);
+
+      &--light-yellow {
+        color: var(--color-light-orange);
+      }
+    }
+  }
+}

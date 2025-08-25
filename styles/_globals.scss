@@ -1,0 +1,64 @@
+@use "helpers" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-family-base);
+  font-size: rem(14);
+  font-weight: 700;
+  color:var(--color-dirty-grey);
+  
+  background-color: #fcfcfc;
+}
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  summary,
+  svg *
+) {
+  outline-color: var(--outline-color);
+  outline-offset: 0;
+}
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  summary,
+  svg * 
+):focus-visible {
+  outline: var(--outline);
+}
+
+a {
+  color: inherit;
+  
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+h1, .h1 {
+  @include fluid-text(36, 24);
+  font-weight: 800;
+}
+
+h2, .h2 {
+  @include fluid-text(30, 18);
+  font-weight: 800;
+}
+
+h3, .h3 {
+  @include fluid-text(16, 14);
+  font-weight: 700;
+}
+
+h4, .h4 {
+  font-size: rem(14);
+  font-weight: 700;
+}

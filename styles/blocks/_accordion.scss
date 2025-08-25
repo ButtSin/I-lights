@@ -1,0 +1,246 @@
+@use "../helpers/index" as *;
+
+.accordion {
+  &__details {
+    & + .accordion__content {
+      button, a {
+        visibility: hidden;
+      }
+    }
+  }
+  
+  &__details[open] {
+    margin-bottom: 14px;
+
+    & + .accordion__content {
+      grid-template-rows: 1fr;  
+
+      &:has(section) {
+        border-bottom: 1px solid #ededed;
+      }
+
+      button, a {
+        visibility: visible;
+      }
+    }
+
+    .accordion__summary {
+      padding-block: 17px 8px;
+    }
+
+    .accordion__icon {
+      rotate: 0deg;
+
+      margin-right: 9px;
+
+      path {
+        fill: var(--color-light-orange);
+      }
+    }
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 17px 20px;
+
+    line-height: 1.29;
+    letter-spacing: -0.008rem;
+
+    border-bottom: 1px solid #ededed;
+
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+
+    transition-duration: var(--transition-duration);
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    translate: 0 1px;
+    rotate: 180deg;
+
+    flex-shrink: 0;
+
+    transition-duration: var(--transition-duration);
+
+    path {
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition-duration: 0.3s;
+
+    &-inner {
+      overflow: hidden;
+    }
+
+    &-body {
+      font-weight: 300;
+      font-size: rem(12);
+      line-height: 167%;
+      color: var(--color-dirty-grey);
+      letter-spacing: -0.005rem;
+    }
+    
+    p {
+      --paragraphMarginBottom: 20px;
+
+      &:last-child {
+        padding-bottom: 14px;
+
+        border-bottom: 1px solid #ededed;
+      }
+    }
+  }
+
+  &--multiline-headings {
+    
+    .accordion__details[open] {
+      .accordion__summary {
+        padding: 12px 12px 14px 20px;
+        margin-bottom: 24px;
+
+        color: var(--color-light);
+
+        background-color: var(--color-pale-blue);
+      }
+
+      .accordion__icon {
+        rotate: 0deg;
+
+        margin-right: 9px;
+
+
+        path {
+          fill: var(--color-light);
+        }
+      }
+    }
+
+    .accordion__summary {
+      padding: 21px 19px 23px 11px;
+      margin-bottom: 5px;
+
+      line-height: 1.43;
+      letter-spacing: -0.02rem;
+    }
+
+    .accordion__heading {
+      padding-right: 30px;
+    }
+
+    .accordion__content-body {
+      p {
+        --paragraphMarginBottom: 23px;
+
+        line-height: 1.83;
+      }
+
+      P:last-child {
+        padding-bottom: 23px;
+      }
+    }
+  }
+
+  &--thin-headings {
+    .accordion__details:not([open]) {
+      .accordion__heading {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 129%;
+        color: #535353;
+
+        transition-duration: var(--transition-duration);
+      }
+    }
+  }
+
+  &--with-table-data {
+    --accordionGridTempateColumns: 0.658fr 0.342fr;
+
+    .accordion__content-body {
+      margin-bottom: 14px; 
+    }
+
+    .accordion__content {
+      margin-left: -2px;
+
+      &-footer {
+        display: grid;
+        grid-template-columns: var(--accordionGridTempateColumns);
+        padding-bottom: 15px;
+
+        border-bottom: 1px solid #ededed;
+      }
+    }
+
+    .accordion__details[open] {
+      margin-bottom: 0;
+      
+      .accordion__summary {
+        padding-block: 16px 16px;
+      }
+    }
+
+    .accordion__summary { 
+      padding-block: 16px 16px;
+    }
+
+    .accordion__heading {
+      letter-spacing: -0.003rem;
+
+      font-weight: 400;
+    }
+
+    .accordion__summary {
+      border-bottom: none;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #ededed;
+
+    &-container {
+      display: grid;
+      grid-template-columns: var(--accordionGridTempateColumns);
+
+      &--big-text {
+        display: flex;
+        column-gap: 14px; 
+        align-items: center;
+
+        .accordion__data-term,
+        .accordion__data-definition {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-term {
+      @include fluid-text(18, 12);
+      font-weight: 500;
+    }
+
+    &-definition {
+      @include fluid-text(18, 14);
+      font-weight: 400;
+    }
+  }
+}

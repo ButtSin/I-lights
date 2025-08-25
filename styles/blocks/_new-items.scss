@@ -1,0 +1,64 @@
+@use "../helpers/index" as *;
+
+.new-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+
+  @include tablet {
+    margin-bottom: 73px;
+  }
+
+  @include mobile {
+    margin-bottom: 36px;
+  }
+  
+  &__header {
+    margin-bottom: 41px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 36px;
+    }
+
+    @include mobile {
+      margin-bottom: 26.5px;
+    }
+
+    &-title {
+      left: -3px;
+
+      letter-spacing: var(--letter-spacing);
+
+      &::after {
+        left: 3px;
+      }
+
+      @include mobile {
+        bottom: -1px;
+
+        letter-spacing: var(--letter-spacing-little);
+      }
+    }
+  }
+
+  &__link {
+    align-self: center;
+    margin-top: 83px;
+
+    @include desktop {
+      margin-top: 74px;
+    }
+
+    @include tablet {
+      margin-top: 60px;
+    }
+
+    @include mobile {
+      margin-top: 39px;
+    }
+  }
+}

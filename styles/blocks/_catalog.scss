@@ -1,0 +1,106 @@
+@use "../helpers/index" as *;
+
+.catalog {
+  &__breadcrumbs {
+    margin-bottom: 54px;
+
+    @include tablet-s {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    left: -2px;
+
+    margin-bottom: 20px;
+
+    letter-spacing: var(--letter-spacing);
+
+    @include tablet-s {
+      left: 0px;
+
+      margin-bottom: 13px;
+
+      font-size: rem(18);
+    }
+  }
+
+  &__content {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      @include tablet-s {
+        flex-direction: column;
+
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__filter {
+    align-self: flex-start;
+
+    @include tablet-s {
+      width: 100%;
+    }
+
+    &-navigation {
+      margin-bottom: 32px;
+
+      @include tablet-s {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__product-sections {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26.5px;
+    margin-left: 21px;
+
+    @include tablet-s {
+      row-gap: 9px;
+      margin-left: 0;
+    }
+  }
+
+  &__product-section {
+    padding-top: 17.5px;
+
+    @include mobile {
+      padding-top: 15.5px;
+    }
+    
+    &-header {
+      margin-bottom: 15px;
+
+      &--big-margin {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-title {
+      font-size: rem(18);
+    }
+
+    &-list {
+     gap: 24px 21px;
+
+     @include mobile {
+      gap: 12px;
+     }
+    }
+  }
+  
+  &__pagination {
+    margin-bottom: 50px;  
+  }
+}

@@ -1,0 +1,234 @@
+@use "../helpers/index" as *;
+
+.services {
+  margin-bottom: 100px;
+
+  @include desktop {
+    margin-bottom: 83px;
+  }
+
+  @include tablet {
+    margin-bottom: 73px;
+  }
+
+  @include mobile {
+    margin-bottom: 44px;
+  }
+  
+  &__header {
+    margin-bottom: 44px;
+
+    letter-spacing: var(--letter-spacing-big);
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
+
+    @include tablet-s {
+      margin-bottom: 18px;
+    }
+
+    @include mobile {
+      letter-spacing: var(--letter-spacing);
+
+      margin-bottom: 7px;
+    }
+  }
+
+  &__body {
+    display: grid;
+  }
+
+  &__accordion,
+  &__item {
+    position: relative;
+
+    margin-left: 128px;
+    --servicesItemAfterHeigth: 40px;
+    min-height: var(--servicesItemAfterHeigth);
+
+    border-bottom: 1px solid var(--color-light-grey);
+
+    @include tablet-s {
+      margin-left: 64px;
+      padding-block: 20px 15px;
+      
+      line-height: 1.57;
+    }
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i})::after {
+        position: absolute;
+        top: var(--servicesItemAfterHeigth);
+        translate: -2% -60%;
+        right: calc(100% + 50px);
+
+        content: "";
+        width: 41px;
+        height: var(--servicesItemAfterHeigth);
+        
+        background: url("/images/services/#{$i}.svg") no-repeat center / contain;
+
+        @include tablet {
+          
+          right: calc(100% + 20px);
+        }
+
+        @include mobile {
+          translate: -2% -50%;
+          right: calc(100% + 20px);
+        }
+      }
+    }
+
+    &:nth-child(4)::after {
+      @include tablet-s {
+        translate: -2% -80%;
+      }
+    }
+
+    &:first-child {
+      .services__accordion-header {
+        padding-top: 25px;
+      }
+    }
+
+    @include tablet {
+      margin-left: 120px;
+
+      border-bottom: none;
+    }
+
+    @include tablet-s {
+      margin-left: 64px;
+    }
+
+    @include mobile {
+      margin-left: 62px;
+
+      border-bottom: none;
+    }
+
+    &-details[open] {
+      .services__accordion-heading {
+        &::before,
+        &::after {
+          background-color: var(--color-light);
+        }
+
+        &::after {
+          rotate: 0deg;
+        }
+      }
+
+      & + .services__accordion-content {
+        grid-template-rows: 1fr;
+      }
+
+      .services__accordion-indicator {
+        &::after {
+          rotate:  135deg;
+        }
+
+        &::before {
+          rotate:  45deg;
+        }
+      }
+    }
+
+    &-summary {
+      display: flex;
+      justify-content: space-between;
+      padding: 23.5px 18px 15px 0;
+      margin-left: 1px;
+
+      font-size: rem(16);
+      letter-spacing: var(--letter-spacing-very-little);
+      color: var(--color-dirty-grey);
+
+      list-style: none;
+      user-select: none;
+
+      cursor: pointer;
+
+      @include hover {
+        color: var(--color-accent);
+
+        .services__accordion-indicator {
+          color: var(--color-blue);
+        }
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      @include tablet-s {
+        padding-right: 0;
+      }
+
+      @include mobile {
+        padding-block: 18px;
+      }
+    }
+
+    &-indicator {
+      display: block;
+      align-self:flex-start;
+      margin: 5px 3px 0 20px;
+
+      color: var(--color-light-orange);
+    }
+
+    &-heading {
+      position: relative;
+
+      padding-right: rem(50);
+      
+      color: inherit;
+      
+      transition-duration: var(--transition-duration);  
+    }
+
+    &-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      
+      transition-duration: 0.3s;
+
+      &-inner {
+        overflow: hidden;
+      }
+
+      &-body {
+        margin: 0 136px 25px 2px;
+
+        color: #a6a6a6;
+        font-weight: 400;
+        line-height: 1.7;
+
+        @include tablet {
+          margin-right: 46px;
+          margin-bottom: 15px;
+        }
+
+        @include tablet-s {
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+
+        p {
+          --paragraphMarginBottom: 25px;
+
+          @include tablet {
+            --paragraphMarginBottom: 15px;
+          }
+
+          @include mobile-s {
+            --paragraphMarginBottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

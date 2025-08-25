@@ -1,0 +1,11 @@
+@use "../helpers/index" as *;
+
+.main-heading {
+  @include fluid-text(24, 18);
+
+  &__heading {
+    display: block;
+   
+    margin-bottom: 32px;
+  }
+}

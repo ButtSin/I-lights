@@ -1,0 +1,116 @@
+@use "../helpers/index" as *;
+
+.mobile-overlay {
+  --mobileOverlayLinkPaddingBlock: 8px;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  
+  font-size: rem(16);
+  color: var(--color-light);
+  font-weight: 500;
+
+  border: none;
+  background-color: var(--color-dark-blue);
+
+  &:modal {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__close-button {
+    color: var(--color-light-orange);
+
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 8.5px 36px 0;
+  
+      @include mobile {
+        //Не по дизайну, так как считаю, что кнопка закрытия должна находиться
+        //ровно по середине кнопки открытия
+        margin-right: -2.5px;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: inline-flex;
+    //Элементы должны располагаться ровно по центру, а не со смещением, поэтому
+    //не стал делать им отступ слева в несколько пикселей. Думаю, что в макете
+    //ошибка.
+
+    &--relative-left {
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  &__link {
+    padding-block: var(--mobileOverlayLinkPaddingBlock);
+
+    transition-duration: var(--transition-duration);
+
+    @include hover(itself) {
+      color: var(--color-blue);
+    }
+
+    &--big {
+      font-weight: 700;
+      column-gap: 15.5px;
+    }
+
+    &--current-link {
+      text-shadow: 0 0 6px var(--color-light);
+    }
+
+    &-icon {
+      color: var(--color-dark);
+    }
+  }
+
+  &__contacts {
+    &-list {
+      @include flex-center;
+      flex-direction: column;
+      row-gap: 18px;
+
+      font-style: normal;
+      font-size: rem(14);
+
+      border-top: var(--border-dirty-grey);
+    }
+   }
+
+  &__email {
+    display: flex;
+    padding-left: 6px;
+    padding-block: var(--mobileOverlayLinkPaddingBlock);
+
+    &-inner {
+      position: relative;
+      left: -6px;
+    }
+  }
+
+  &__tel {
+    //Элемент должны располагаться ровно по центру, а не со смещением, поэтому
+    //не стал делать ему отступ слева в несколько пикселей. Думаю, что в макете
+    //ошибка.
+    &-inner {
+      column-gap: 8px;
+      margin-left: -7px;
+
+      letter-spacing: var(--letter-spacing-little);
+    }
+  }
+}
+
+//Весь макет - одна большая ошибка.

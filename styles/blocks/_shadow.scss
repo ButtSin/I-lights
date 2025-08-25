@@ -1,0 +1,27 @@
+@use "../helpers/index" as *;
+
+.shadow {
+  &:focus-within {
+    box-shadow: var(--shadow-orange);
+    
+    transition-duration: var(--transition-duration);
+
+    @media (hover: none) {
+      transition-duration: 0s;
+    }
+  }
+  
+  @include hover(itself) {
+    box-shadow: var(--shadow-orange);
+  }
+
+  &--bottom-light {
+    &:focus-within {
+      box-shadow: 0 0 15px 0 rgba(255, 201, 79, 0.3);
+    }
+
+    @include hover(itself) {
+      box-shadow: 0 0 15px 0 rgba(255, 201, 79, 0.3);
+    }
+  }
+}

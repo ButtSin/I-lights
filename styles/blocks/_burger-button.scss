@@ -1,0 +1,25 @@
+@use "../helpers/index" as *;
+
+.burger-button {
+  --burgerButtonBgColor: var(--color-light-orange);
+
+  @include square(30px);
+  @include flex-center;
+
+  @include hover(after) {
+    &::after {
+      --burgerButtonBgColor: var(--color-blue);
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 1px;
+
+    background-color: var(--burgerButtonBgColor);
+    box-shadow: 0 -9px var(--burgerButtonBgColor), 
+                0 9px var(--burgerButtonBgColor);
+    transition-duration: var(--transition-duration);
+  }
+}

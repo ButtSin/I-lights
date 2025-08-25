@@ -1,0 +1,51 @@
+@use "../helpers/index" as *;
+
+.examples {
+  display: grid;
+  grid-template-areas: 
+    "heading body"
+    "header body";
+  grid-template-columns: 300px 1fr;  
+  grid-template-rows:  auto 1fr; 
+  gap: 21px 25px;
+
+  @include tablet-s-alt {
+    display: block;
+  }
+
+  &__main-heading {
+    grid-area: heading;
+    margin-top: 9px;
+
+    font-size: rem(24);
+    line-height: 1.67;
+
+    @include tablet-s-alt {
+      margin-bottom: 10px;
+
+      font-size: rem(18);
+      line-height: 2.22;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 12px;
+
+    font-size: rem(16);
+    letter-spacing: -0.078rem;
+  }
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__body {
+    grid-area: body;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+  }
+}

@@ -1,0 +1,58 @@
+@use "../helpers/index" as *;
+
+.about-company {
+  &__breadcrubms {
+    margin-bottom: 47px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__information {
+    margin-bottom: 104px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include tablet-s {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 14px;
+    }
+
+    &-heading {
+      translate: -3px 0;
+   
+      margin-bottom: 22px;
+      
+      @include fluid-text(24, 18);
+      line-height: 2.22;
+
+      @include tablet-s {
+        translate: 0;
+
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__examples {
+    margin-bottom: 100px;
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+
+    @include tablet-s-alt {
+      margin-bottom: 58px;
+    }
+  }
+}

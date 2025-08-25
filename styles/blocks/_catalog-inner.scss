@@ -1,0 +1,33 @@
+@use "../helpers/index" as *;
+
+.catalog-inner {
+  margin-bottom: 88px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include tablet-s {
+    margin-bottom: 46px;
+  }
+
+  &__header {
+    margin-bottom: 64px;
+
+    letter-spacing: var(--letter-spacing);
+
+    @include desktop {
+      margin-bottom: 44px;
+    }
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+    
+    @include tablet-s {
+      left: -3px;
+
+      margin-bottom: 11px;
+    }
+  }
+}

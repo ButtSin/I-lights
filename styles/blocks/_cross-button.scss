@@ -1,0 +1,18 @@
+@use "../helpers/index" as *;
+
+.cross-button {
+  @include square(22px);
+
+  @include flex-center;
+
+  border-radius: 50%;
+  background-color: var(--color-light-orange);  
+
+  &--rotated {
+    @include square(30px);
+
+    background: none;
+
+    rotate: 45deg;
+  }
+}

@@ -1,0 +1,58 @@
+@use "normalize"; 
+@use "ownNormalize"; 
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+
+
+@use "blocks/button";
+@use "blocks/cross-button";
+@use "blocks/burger-button";
+@use "blocks/link-icon";
+@use "blocks/content";
+@use "blocks/main-heading";
+@use "blocks/header";
+@use "blocks/mobile-overlay";
+@use "blocks/shadow.scss";
+@use "blocks/pagination-button";
+@use "blocks/pagination";
+@use "blocks/fade.scss";
+@use "blocks/scrollbar";
+@use "blocks/slider";
+@use "blocks/tabs-details.scss";
+@use "blocks/section.scss";
+@use "blocks/cross-icon.scss";
+@use "blocks/services.scss";
+@use "blocks/catalog-inner";
+@use "blocks/grid.scss";
+@use "blocks/product-card";
+@use "blocks/new-items";
+@use "blocks/download-icon.scss";
+@use "blocks/files";
+@use "blocks/input-text";
+@use "blocks/feedback";
+@use "blocks/footer";
+@use "blocks/breadcrumbs";
+@use "blocks/tabs";
+@use "blocks/accordion";
+@use "blocks/about-company";
+@use "blocks/input-range";
+@use "blocks/filter";
+@use "blocks/filter-navigation";
+@use "blocks/catalog";
+@use "blocks/currency";
+@use "blocks/input-checkbox";
+@use "blocks/modal";
+@use "blocks/cart";
+@use "blocks/cart-products";
+@use "blocks/cart-item";
+@use "blocks/gallery";
+@use "blocks/examples";
+@use "blocks/company-services";
+@use "blocks/about-ordering";
+@use "blocks/cms-container";
+@use "blocks/product";
+
+

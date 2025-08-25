@@ -1,0 +1,80 @@
+@use "../helpers/index" as *;
+
+.pagination-button {
+  position: relative;
+
+  @include square(24px);
+  @include flex-center;
+  padding: 7px 8px;
+
+  color: var(--color-dark-gray);
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+
+  border: 1px solid #ececec;
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+
+  //Прописал transition-property, чтобы не анимировался outline
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: var(--transition-duration);
+
+  @include hover(itself) {
+    color: var(--color-light);
+
+    border-color: var(--color-pale-blue);
+    background-color: var(--color-pale-blue);
+  }
+
+  &:disabled {
+    color: #C4C4C4;
+
+    @include hover {
+      border-color: #ececec;
+      background-color: var(--color-light);
+
+      cursor: auto;
+    }
+  }
+
+  &:focus-within {
+    @media (hover: none) {
+      transition-duration: 0s;
+    }
+  }
+
+  &--elongated {
+    width: 32px;
+    height: 27px;
+    padding: 8px 12px;
+  
+    border: 1px solid #ededed;
+    border-radius: 3px;
+
+    @include tablet {
+      width: 42px;
+      height: 37px;
+    }
+  }
+
+  &--current {
+    @include hover(itself) {
+      color: var(--color-dark-gray);
+
+      border-color: var(--color-light-orange);
+      background-color: var(--color-light-orange);
+
+      user-select: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    &--to-right {
+      scale: -1 1;
+    }
+  }
+}

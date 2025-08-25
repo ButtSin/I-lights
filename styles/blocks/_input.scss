@@ -1,0 +1,35 @@
+.input {
+  height: 25px;
+  min-height: 25px;
+  padding: 0 1.3vw 4px 1px;
+
+  font-weight: 400;
+
+  border-bottom: var(--border-light-grey);
+  outline: none;
+
+  &:focus-visible {
+    border-bottom: var(--outline);
+  }
+
+  @include tablet-s {
+    padding-left: 0;
+    padding-right: 3vw;
+  }
+
+  &--textarea {
+    position: relative;
+    
+    resize: vertical;
+  }
+
+  /*При масштабировании страницы от 100% до ~30% страницы в firefox 
+  увеличивается размер иконки resize. При ~30% 
+  масштаба иконка-треугольник у textarea начинает выходить за 
+  рамки своего элемента. Поэтому здесь изменяется z-index для корректного
+  отображения этой иконки, при котором она не будет перекрывать элементы с  
+  заданным модификатором.*/
+  &--big-z-index  {
+    z-index: calc(var(--feedbackTextareaWrapperZIndex) + 1);
+  }
+}

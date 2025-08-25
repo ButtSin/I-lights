@@ -1,0 +1,29 @@
+.pagination {
+  --paginationColumnGap: 12px;
+  --paginationItemsSize: 24px;
+
+  display: flex;
+  column-gap: var(--paginationColumnGap);
+  justify-content: center;
+  height: var(--paginationItemsSize);
+  padding-left: 340px;
+
+  &__list {
+    display: flex;
+    column-gap: var(--paginationColumnGap);
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__link {
+    height: var(--paginationItemsSize);
+    &--current {
+      font-weight: 700;
+      
+      border-color: var(--color-light-orange);
+      background-color: var(--color-light-orange);      
+    }
+  }
+}

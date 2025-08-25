@@ -1,0 +1,91 @@
+@use "../helpers/index" as *;
+
+.button {
+  @include flex-center(true);
+  width: 245px;
+  height: var(--button-height);
+  padding-block: 16px 18px;
+
+  color: var(--color-light);
+  font-weight: 600;
+  white-space: nowrap;
+
+  border-radius: var(--border-radius);
+  background-color: var(--color-pale-blue);
+
+  //Прописал transition-property, чтобы не анимировался outline
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transition-duration);
+
+  &:focus-visible {
+    outline: var(--outline-big);
+    outline-offset: -1px;
+  }
+
+  @include hover(itself) {
+    color: var(--color-pale-blue);
+    
+    background-color: var(--color-light-orange);
+  }
+
+  &--light {
+    color: var(--color-dirty-grey);
+    font-weight: 500;
+    
+    border: var(--border-grey);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light);
+
+    @include hover(itself) {
+      color: var(--color-light);
+      
+      background-color: var(--color-pale-blue);
+    }
+  }
+
+  &--dark-blue {
+    padding: 13px 23px 14px 30px;
+
+    color: var(--color-light);
+    font-weight: 700;
+    line-height: 1;
+
+    border: var(--border-light);
+    border-radius: var(--border-radius);
+    background-color: var(--color-dark-blue);
+
+    svg {
+      color: var(--color-light-orange);
+    }
+
+    @include hover {
+      background-color: transparent;
+    }
+  }
+
+  &--light-orange {
+    padding-block: 13px 14px;
+
+    color: var(--color-dirty-gray);
+
+    background-color: var(--color-light-orange);
+
+    @include hover {
+      color: var(--color-light);
+      
+      background-color: var(--color-pale-blue);
+    }
+  }
+
+  &--little {
+    width: 214px;
+
+    &-pd {
+      padding-inline: 27px;
+    }
+  }
+
+  &--very-little {
+    width: 197px;
+  }
+}

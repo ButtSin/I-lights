@@ -1,0 +1,117 @@
+@use "helpers/index" as *;
+
+:where(.reset-link) {
+  @include reset-link;
+}
+
+:where(.reset-button) {
+  @include reset-button;
+}
+
+:where(.reset-input-text) {
+  @include reset-input-text;
+}
+
+:where(.reset-input-range) {
+  @include reset-input-range;
+}
+
+:where(.reset-input-number) {
+  @include reset-input-number;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+
+  &--outline-mb {
+    @include mobile {
+      padding-inline: calc(var(--container-padding-x) - var(--outline-size));
+    }
+  }
+
+  &--outline-ts {
+    @include tablet-s {
+      padding-inline: calc(var(--container-padding-x) - var(--outline-size));
+    }
+  }
+
+  @include mobile {
+    --container-padding-x: 10px;
+
+    &--outline-mb {
+      --container-padding-x: 8px;
+    }
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-desktop-s {
+  @include desktop-s {
+    display: none !important;
+  }
+}
+
+.visible-desktop-s {
+  @include desktop-s-above {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-s {
+  @include tablet-s {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
+.visible-tablet-s {
+  @include tablet-s-above {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-s {
+  @include tablet-s {
+    display: none !important;
+  }
+}
+
+.visible-tablet-s-alt {
+  @include tablet-s-alt-above {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-s-alt {
+  @include tablet-s-alt  {
+    display: none !important;
+  }
+}

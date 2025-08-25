@@ -1,0 +1,33 @@
+@use "../helpers/index" as *;
+
+.cart {
+  &__breadcrumbs {
+    margin-bottom: 55px;
+
+    @include tablet-s {
+      margin-left: 3px;
+      margin-bottom: 29px;
+    }
+  }
+
+  &__empty-notification  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    justify-self: center;
+    align-self: center;
+    gap: 30px;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet-s {
+      font-size: rem(12);
+    }
+
+    &-link {
+      align-self: center;
+    }
+  }
+}

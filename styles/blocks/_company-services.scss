@@ -1,0 +1,51 @@
+@use "../helpers/index" as *;
+
+.company-services {
+  &__breadcrumbs {
+    margin-bottom: 53px;
+
+    @include tablet {
+      margin-bottom: 38px;
+    }
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__inforamation {
+    margin-bottom: 95px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+    &-heading {
+      margin-bottom: 29px;
+
+      @include fluid-text(24, 18);
+      line-height: 167%;
+      color: var(--color-dirty-grey);
+
+      @include mobile {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__examples {
+    margin-bottom: 100px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      margin-bottom: 47px;
+    }
+  }
+}

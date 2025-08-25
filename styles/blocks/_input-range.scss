@@ -1,0 +1,279 @@
+@use "../helpers/index" as *;
+
+.input-range {
+  --inputRangeThumbSize: 13px;
+  --inputRangeTrackHeight: 1px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:has(.noUi-state-drag) {
+    .input-range__control {
+      filter: brightness(90%); 
+    }
+  }
+
+  &__description {
+    display: inline-flex;
+    margin-bottom: 4px;
+
+    font-weight: 600;
+  }
+
+  &__min-value, &__max-value {
+    height: 24px;
+    width: calc(6ch + 10px);
+    padding: 5px;
+
+    font-weight: 500;
+    color: var(--color-pale-blue);
+    line-height: 1;
+
+    background-color: #fcfcfc;
+    outline-offset: -1px;
+
+    &:focus-visible {
+      z-index: 1;
+      
+      outline: var(--outline);
+    }
+  }
+
+  &__min-value {
+    translate: -5px 0;
+  }
+
+  &__max-value {
+    translate: 5px 0;
+
+    text-align: end;
+  }
+
+  &__values { 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+    font-size: rem(12);
+  }
+
+  &__control {
+
+    align-self: center;
+
+    &::after,
+    &::before {
+      position: absolute;
+
+      content: "";
+      width: calc(100% + 13.5px);
+      height: 1px;
+      translate: -7px 0;
+      background-color: var(--color-grey-alt) !important;
+    }
+
+    &.noUi-target {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 13.5px);
+
+      border: none;
+      height: 24px;
+      background: none;
+      box-shadow: none;
+      top: -9px;
+    }
+
+    .noUi-base {
+      height: 1px;
+      background-color: var(--color-grey-alt);
+      overflow: visible;
+    }
+
+    .noUi-connects {
+      display: flex;
+      align-items: center;
+      background: none;
+      height: 24px;
+      top: -11px;
+      overflow: visible;
+    }
+
+    .noUi-connect {
+      height: 1px;
+      top: 11px;
+      background-color: var(--color-light-orange);
+    }
+
+    .noUi-origin {
+      height: 1px;
+    }
+
+    .noUi-handle {
+      right: -6px;
+      @include square(13px);
+
+      border-radius: 100%;
+      fill: #ffc94f;
+      background-color: var(--color-light-orange);
+      box-shadow: 0 0 4px 0 #ffc94f;
+      border: none;
+
+      &::after,
+      &::before {
+        position: static;
+        background: none;
+              @include square(24px);
+              @include abs-center;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 4px 0 var(--color-blue);
+        filter: brightness(90%); 
+      }
+    }
+
+    .noUi-touch-area {
+      
+    }
+
+    transition-duration: var(--transition-duration);
+
+    @include hover(itself) {
+      filter: brightness(90%); 
+    }
+
+    &:focus-within {
+      filter: brightness(90%); 
+
+      @media (hover:none) {
+        transition-duration: 0s;
+      }
+    }
+
+
+  //   order: 2;
+  //   width: 100%;
+  //   height: var(--inputRangeThumbSize);
+
+  //   cursor: auto;
+
+  //   transition-property: background-color, color, filter;
+  //   transition-duration: var(--transition-duration);
+
+  //   &:active {
+  //     cursor: grabbing;
+  //   }
+
+  //   @include hover {
+  //     filter: brightness(90%);
+  //   }
+
+  //   &:focus-visible {
+  //     filter: brightness(90%); 
+
+  //     @media (hover:none) {
+  //       transition-duration: 0s;
+  //     }
+  //   }
+    
+  //   @supports selector(::-webkit-slider-runnable-track) {
+  //     --clip-edges: 1px;
+  //     --clip-top: calc((var(--inputRangeThumbSize) - 
+  //       var(--inputRangeTrackHeight)) * 0.5 - 0.5px);
+  //     --clip-bottom: calc(var(--inputRangeThumbSize) - var(--clip-top));
+  //     --clip-further: calc(100% + 10px);
+  //     --thumb-radius: calc((var(--inputRangeThumbSize) * 0.5) - 1px);
+  //     --box-fill: calc(-100vmax - var(--inputRangeThumbSize, 
+  //       var(--inputRangeThumbSize))) 0 0px 100vmax currentColor;
+
+  //     height: var(--inputRangeThumbSize);
+      
+  //     color: var(--color-light-orange);
+
+  //     overflow: hidden;
+
+  //     &::-webkit-slider-runnable-track { 
+  //       height: var(--inputRangeTrackHeight);
+        
+  //       background: linear-gradient(var(--color-grey-alt) 0 0) scroll 
+  //         no-repeat center / 100% calc(var(--inputRangeTrackHeight) + 1px);
+  //     }
+
+  //     &::-webkit-slider-thumb {
+  //       width: var(--inputRangeThumbSize);        
+  //       height: var(--inputRangeThumbSize);
+  //       margin-top: calc(-1 * (var(--inputRangeThumbSize) / 2 - 
+  //         var(--inputRangeTrackHeight) / 2));
+
+  //       background: linear-gradient(currentColor 0 0) scroll no-repeat left 
+  //         center / 50% calc(var(--inputRangeTrackHeight) + 1px);
+  //       background-color: currentColor;
+  //       box-shadow: var(--box-fill);
+  //       border-radius: var(--inputRangeThumbSize, var(--inputRangeThumbSize));
+  //       filter: brightness(100%);
+  //       clip-path: polygon(
+  //         100% -1px,
+  //         var(--clip-edges) -1px,
+  //         0 var(--clip-top),
+  //         -100vmax var(--clip-top),
+  //         -100vmax var(--clip-bottom),
+  //         0 var(--clip-bottom),
+  //         var(--clip-edges) 100%,
+  //         var(--clip-further) var(--clip-further)
+  //       );
+
+  //       cursor: grab;
+
+  //       &:active {
+  //         cursor: grabbing;
+  //       }
+  //     }
+  //   }
+
+  //  @supports selector(::-moz-range-track) {
+  //   &::-moz-range-track {
+  //     height: var(--inputRangeTrackHeight);
+      
+  //     background-color: var(--color-grey-alt);
+  //   }
+
+  //   &::-moz-range-thumb {
+  //     position: relative;
+  //     z-index: 2;
+  //     translate: 0 0; // Без этого свойства outline ползунка 
+  //     //оказывается под дорожкой
+        
+  //     width: var(--inputRangeThumbSize);
+  //     height: var(--inputRangeThumbSize);
+
+  //     border: none;
+  //     box-shadow: 0 0 4px 0 var(--color-light-orange);
+  //     border-radius: 50%;
+  //     background-color: var(--color-light-orange);
+
+  //     cursor: grab;
+
+  //     transition-property: box-shadow;
+  //     transition-duration: var(--transition-duration);
+
+  //     &:active {
+  //       cursor: grabbing;
+  //     }
+  //   }
+
+  //   &:focus-visible::-moz-range-thumb {
+  //     box-shadow: 0 0 4px 0 var(--color-blue);
+  //   }
+
+  //   &::-moz-range-progress {
+  //     height: var(--inputRangeTrackHeight);
+      
+  //     background-color: var(--color-light-orange);
+  //   } 
+  //  }
+  }
+}
+

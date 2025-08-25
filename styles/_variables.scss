@@ -1,0 +1,60 @@
+@use "helpers/index" as *;
+
+:root {
+  --color-blue: #00bfff;
+  --color-dark: #000000;
+  --color-dark-blue: #0C0537;
+  --color-pale-blue: #3D4F64;
+  --color-grey: #e5e5e5;
+  --color-grey-alt: #eaeaea;
+  --color-dark-gray: #464855;
+  --color-light-grey: #EFEFEF;
+  --color-warm-grey: #8C8C8C;
+  --color-dirty-grey: #535353;
+  --color-orange: #f3a800;
+  --color-light-orange: #FFC94F;
+  --color-light: #ffffff;
+
+  --scrollbar-color: var(--color-light-orange) var(--color-grey);
+
+  --border-light: 1px solid var(--color-light);
+  --border-grey: 1px solid var(--color-grey);
+  --border-light-grey: 1px solid var(--color-light-grey);
+  --border-dirty-grey: 1px solid var(--color-dirty-grey);
+  --border-grey-alt: 1px solid var(--color-grey-alt);
+  --border-light-blue: 1px solid var(--color-light-blue);
+  --border-orange: 2px solid var(--color-orange);
+
+  --border-radius: 2px;
+  --border-radius-top: 3px 3px 0 0;
+  --border-radius-bottom: 0 0 2px 2px;
+  --border-radius-bottom-left: 0 0 0 2px;
+  --border-radius-bottom-right: 0 0 2px 0px;
+
+  --shadow-orange: 0 4px 10px 0 rgba(243, 168, 0, 0.25);
+
+  --font-family-base: "Montserrat", sans-serif;
+
+  --letter-spacing: 0.025rem;
+  --letter-spacing-little: 0.013rem;
+  --letter-spacing-very-little: 0.002rem;
+  --letter-spacing-big: 0.05rem;
+
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{rem(20)}; //Хз
+
+  --button-height: 44px;
+  --button-height-small: 27px;
+  --buttom-height-big: 55px;
+  --buttom-height-big-alt: 53px;
+
+  --input-height: 26px;
+
+  --outline-size: 1px;
+  --outline-size-big: 2px;
+  --outline-color: var(--color-blue);
+  --outline: var(--outline-size) solid var(--outline-color);
+  --outline-big: var(--outline-size-big) solid var(--outline-color);
+
+  --transition-duration: 0.2s;
+}

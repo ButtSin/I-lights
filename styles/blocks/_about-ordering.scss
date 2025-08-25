@@ -1,0 +1,34 @@
+@use "../helpers/index" as *;
+
+.about-ordering {
+  &__breadcrubms {
+    margin-bottom: 47px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__information {
+     margin-bottom: 38px;
+
+    &-heading {
+      translate: -3px 0;
+   
+      margin-bottom: 22px;
+      
+      @include fluid-text(24, 18);
+      line-height: 2.22;
+
+      @include tablet-s {
+        translate: 0;
+
+        margin-bottom: 0;
+      }
+    }
+  }
+}

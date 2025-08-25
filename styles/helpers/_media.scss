@@ -1,0 +1,163 @@
+@use "sass:list";
+@use "./functions" as *;
+
+$desktop: 1280.98;
+$desktop-above: 1281.98;
+
+$desktop-s: 1150.98;
+$desktop-s-above: 1151.98;
+
+$desktop-l: 1420.98;
+
+$tablet: 1024.98;
+$tablet-above: 1025.98;
+
+$tablet-s: 767.98;
+$tablet-s-above: 768;
+
+$tablet-s-alt: 924.98;
+$tablet-s-alt-above: 924.98;
+
+$mobile: 500.98;
+$mobile-above: 501.98;
+
+$mobile-s: 360.98;
+$mobile-s-above: 361.98;
+
+@mixin desktop {
+  @media (width <= rem($desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-above {
+  @media (width > rem($desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-s {
+  @media (width <= rem($desktop-s)) {
+    @content;
+  }
+}
+
+@mixin desktop-s-above {
+  @media (width > rem($desktop-s-above)) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media (width <= rem($desktop-l)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (width <= rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (width > rem($tablet-above)) {
+    @content;
+  }
+}
+
+@mixin tablet-s {
+  @media (width <= rem($tablet-s)) {
+    @content;
+  }
+}
+
+@mixin tablet-s-above {
+  @media (width > rem($tablet-s-above)) {
+    @content;
+  }
+}
+
+@mixin tablet-s-alt {
+  @media (width <= rem($tablet-s-alt)) {
+    @content;
+  }
+}
+
+@mixin tablet-s-alt-above {
+  @media (width > rem($tablet-s-alt-above)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (width > rem($mobile-above)) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (width <= rem($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above {
+  @media (width > remd($mobile-s-above)) {
+    @content;
+  }
+}
+
+/*
+  Используем список cleanFromDuration, чтобы обнулять transition-duration и 
+  таким образом на мобильных устройствах при тапе по соответствующим элементам 
+  во всех браузерах видеть не начало или середину анимации, а сразу её финал.
+*/
+
+@mixin hover($cleanFromDuration...) {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @if list.index($cleanFromDuration, itself) {
+        transition-duration: 0s;
+      } 
+
+      @if list.index($cleanFromDuration, innerElements) {
+        & * {
+          transition-duration: 0s;
+        }
+      } 
+
+      @if list.index($cleanFromDuration, after) {
+        &::after {
+         transition-duration: 0s;
+       }
+      }
+
+      @if list.index($cleanFromDuration, before) {
+        &::before {
+         transition-duration: 0s;
+       }
+      }
+
+      @if list.index($cleanFromDuration, innerPseudo) {
+        & *::after, & *::before {
+         transition-duration: 0s;
+       }
+      }
+
+      @content;
+    }
+  }
+}

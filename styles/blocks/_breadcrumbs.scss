@@ -1,0 +1,52 @@
+@use "../helpers/index" as *;
+
+.breadcrumbs {
+  --breadcrumbsColumnGap: 24.5px;
+
+  // margin-bottom: 55px;
+
+  font-size: rem(12);
+  font-weight: 500;
+  color: #7c7c7c;
+
+  &-list {
+    display: flex;
+    column-gap: var(--breadcrumbsColumnGap);
+    margin-left: -2px;
+    padding-bottom: 10px;
+
+    list-style-type: none;
+
+    overflow: auto;
+  }
+
+  &-item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      @include abs-center;
+      left: calc(100% + var(--breadcrumbsColumnGap) / 2);
+
+      content: "-";
+    }
+  }
+
+  &-link {
+    transition-duration: var(--transition-duration);
+
+    white-space: nowrap;
+    
+    @include hover(itself) {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+
+    &:focus-within {
+      color: var(--color-blue);
+      
+      @media (hover: none) {
+        transition-duration: 0s;
+      }
+    }  
+  }
+}

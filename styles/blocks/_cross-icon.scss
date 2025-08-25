@@ -1,0 +1,63 @@
+@use "../helpers/index" as *;
+
+.cross-icon {
+  --crossIconWidth: 12px;
+
+  position: relative;
+  
+  @include square(var(--crossIconWidth));
+
+  &::after, &::before {
+    @include abs-center;
+    
+    content: "";
+    width: var(--crossIconWidth);
+    height: 3px;
+    background-color: currentColor;
+
+    transition-duration: var(--transition-duration);
+  }
+
+  &::after {
+    rotate: 90deg;
+  }
+
+  &--pale-blue {
+    &::after, &::before {
+      background-color: var(--color-pale-blue);
+    }
+  }
+
+  &--little {
+    --crossIconWidth: 10px;
+
+    &::after, &::before {
+      height: 2.5px;
+    }
+  }
+
+  &--very-little {
+    --crossIconWidth: 8px;
+
+    &::after, &::before {
+      height: 2.5px;
+    }
+  }
+
+  &--big {
+    --crossIconWidth: 14px;
+
+    &::after, &::before {
+      height: 3.5px;
+    }
+  }
+
+  &--rotated {
+    &::after {
+      rotate: 45deg;
+    }
+    &::before {
+      rotate: -45deg;
+    }
+  }
+}

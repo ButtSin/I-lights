@@ -1,0 +1,53 @@
+@use "../helpers/index" as *;
+
+.section {
+  --sectionMargin: 20px;
+
+  @include desktop {
+    --sectionMargin: 15px;
+  }
+
+  @include tablet {
+    --sectionMargin: 0px;
+  }
+
+  &__header {
+    position: relative;
+
+    &-title {
+      position: relative;
+
+      line-height: 1.7;
+
+      &--little-lh {
+        line-height: 1.3;
+      }
+
+      &--orange {
+        margin-left: var(--sectionMargin);
+
+        &::after {
+          @include abs-center;
+          left: 0;
+          translate: calc(var(--sectionMargin) * -1) -50%;
+
+          content: "";
+          width: 5px;
+          height: 25px;
+
+          background-color: var(--color-light-orange);
+
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    &--with-margin {
+      margin-left: var(--sectionMargin);
+    }
+  }
+}

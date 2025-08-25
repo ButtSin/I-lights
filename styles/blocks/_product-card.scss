@@ -1,0 +1,308 @@
+@use "../helpers/index" as *;
+
+.product-card {
+  --productCardWattsMinHeigth: 31px;
+  --productCardImageHeight: 246px;
+  --productCardFooterHeight: 55px;
+  --productCardPaddingInline: 22px;
+
+  position: relative;
+
+  display: grid;
+  grid-template-rows: var(--productCardImageHeight) 1fr auto;
+  height: 100%;
+  padding-top: var(--productCardWattsMinHeigth);
+
+  border: var(--border-grey);
+  @include shadow;
+
+  transition-duration: var(--transition-duration);
+
+  &:focus-within {
+    .product-card__body-price {
+      color: var(--color-light-orange);
+
+      @media (hover: none) {
+        transition-duration: 0s;
+      }
+    }
+  }
+
+  @include hover(innerElements) {
+    .product-card__body-price {
+      color: var(--color-light-orange);
+    }
+  }
+
+  @include tablet {
+    --productCardWattsMinHeigth: 25px;
+    --productCardPaddingInline: 18px;
+    --productCardImageHeight: 200px;
+  }
+
+  @include mobile {
+    --productCardWattsMinHeigth: 20px;
+    --productCardPaddingInline: 16px;
+    --productCardImageHeight: 125px;
+  }
+
+  &--elongated-mb {
+    @include mobile-s {
+      padding-top: calc(var(--productCardWattsMinHeigth) + 10px);
+
+      .product-card__header {
+        height: 105px;
+        margin-block: 9px 0;
+        &-watts {
+          top: 9px;
+        }
+  
+        &-image {
+          height: 91%;
+        }
+      }
+
+      .product-card__body {
+        margin-top: -9px;
+      }
+    }
+  }
+
+  &--wide-image {
+    .product-card__header {
+      @include mobile {
+        padding-inline: 15px;
+      }
+    }
+    .product-card__header-image {
+      height: auto;
+      margin: 44px 0 0 0;
+      align-self: center;
+
+      @include mobile {
+        height: 100%;
+        margin-top: 10px;
+        align-self: center;
+      }
+    }
+  }
+
+  &__header {
+    @include flex-center;
+    padding-inline: var(--productCardPaddingInline);
+    margin-bottom: 20px;
+
+    &-watts {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 50px;
+      min-height: var(--productCardWattsMinHeigth);
+      padding: 4px 15px;
+
+      font-weight: 600;
+      color: #3d4f64;
+      line-height: 1.4;
+
+      border-radius: var(--border-radius-bottom-right);
+      background-color: var(--color-light-orange);
+
+      @include tablet {
+        min-width: 44px;
+        padding: 2px 7.5px;
+      }
+
+      @include mobile {
+        top:-1.5px;
+
+        min-width: 35.5px;
+        --productCardWattsMinHeigth: 0px;
+        padding: 0;
+      }
+    }
+
+    &-image {
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+
+  &__body {
+    padding-inline: var(--productCardPaddingInline);
+
+    @include tablet {
+      --productCardPaddingInline: 10px;
+    }
+
+    @include mobile {
+      --productCardPaddingInline: 8px;
+      margin-left: 1.5px;
+    }
+
+    &-title {
+      margin-left: -2px;
+      margin-bottom: 15px;
+
+      line-height: 1.6;
+
+      @include tablet {
+        font-weight: 500;
+      }
+
+      @include mobile {
+        position: relative;
+        bottom: 1px;
+
+        margin-bottom: 16px;
+
+        line-height: 1.62;
+        font-size: rem(11);
+      }
+    }
+
+    &-list {
+      padding-left: 17px;
+      margin-bottom: 16px;
+
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    &-item {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        right: calc(100% + 11px);
+        top: 8px;
+
+        content: "";
+        @include square(6px);
+
+        border-radius: 50%;
+        background-color: var(--color-light-orange);
+      }
+    }
+
+    &-price {
+      width: fit-content;
+      margin-left: -2px;
+      margin-bottom: 6px;
+
+      font-size: rem(20);
+
+      transition-duration: var(--transition-duration);
+
+      @include tablet {
+        margin-bottom: 0px;
+
+        font-size: rem(16);
+      }
+
+      @include mobile {
+        margin-left: -1px;
+        
+        font-size: rem(14);
+      }
+
+      &-currency {
+        position: relative;
+        top: -1px;
+
+        @include tablet {
+          top: 0px;
+
+          width: 12px;
+          height: 11px;
+        }
+
+        @include mobile {
+          left: 1.5px;
+
+          width: 10px;
+          height: 9px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: 44px;
+
+    @include tablet {
+      --productCardFooterHeight: 38px;
+      margin-top: 25px;
+    }
+
+    @include mobile {
+      --productCardFooterHeight: 37px;
+      margin-top: 19px;
+    }
+
+    &-link {
+      position: relative;
+      left: -1px;
+      bottom: -1px;
+
+      flex-grow: 1;
+      width: auto;
+      height: var(--productCardFooterHeight);
+
+      border-radius: var(--border-radius-bottom-left);
+
+      @include mobile {
+        --productCardFooterHeight: 38px;
+        bottom: 0;
+
+        font-size: rem(12);
+      }
+    }
+
+    &-button {
+      position: relative;
+      bottom: -1px;
+
+      @include flex-center;
+      height: var(--productCardFooterHeight);
+      width: 59px;
+      margin-left: -1px;
+
+      color: var(--color-pale-blue);
+
+      border-top: var(--border-grey);
+
+      //Прописал transition-property, чтобы не анимировался outline
+      transition-property: color, background-color;
+      transition-duration: var(--transition-duration);
+
+      &:focus-visible {
+        outline: var(--outline-big);
+        outline-offset: -1px;
+      }    
+
+      @include hover(innerPseudo) {
+        color: var(--color-light-orange);
+
+        background-color: var(--color-light-grey);
+      }
+
+      @include mobile {
+        --productCardFooterHeight: 37px;
+        @include square(var(--productCardFooterHeight));
+      }
+
+      &-icon {
+        &::after, &::before {
+          width: 2.5px;
+          height: 9px;
+        }
+      }
+    }
+  }
+}

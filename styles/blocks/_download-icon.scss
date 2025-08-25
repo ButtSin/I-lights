@@ -1,0 +1,15 @@
+@use "../helpers/index" as *;
+
+.download-icon {
+  --downloadIconSize: 21px;
+  
+  &::after {
+    position: absolute;
+
+    content: "";
+    @include square(var(--downloadIconSize));
+    
+    background: url("../../images/files/arrow-down.svg") no-repeat 
+      center / contain;
+  }
+}

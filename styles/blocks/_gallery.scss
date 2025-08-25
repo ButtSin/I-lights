@@ -1,0 +1,77 @@
+@use "../helpers/index" as *;
+
+.gallery {
+  &__image,
+  &__image-container {
+    height: 316px;
+
+    @include tablet-s-alt {
+      height: 30.8vw;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    object-fit: cover ;
+  }
+
+  &__image-container {
+    margin-bottom: 22px;
+
+    @include tablet-s-alt {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__thumbnails {
+    display: flex;
+    column-gap: 24px;
+
+    @include tablet-s-alt {
+      column-gap: 8px;
+    }
+  }
+
+  &__thumbnail,
+  &__button {
+    max-width: 304px;
+    width: 100%;
+    height: 148px;
+
+    @include tablet-s-alt {
+      height: 14.45vw;
+    }
+  }
+
+  &__thumbnail {
+    object-fit: cover;
+  }
+
+  &__button {
+    position: relative;
+
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 100%;
+      
+      background-color: rgb(172, 172, 172);
+      opacity: 0.5;
+
+      transition-duration: var(--transition-duration);
+    }
+
+    &.is-active {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}

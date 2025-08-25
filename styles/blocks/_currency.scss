@@ -1,0 +1,16 @@
+.currency {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 160% 70%;
+
+    content: "";
+    width: 8px;
+    height: 9px;
+
+    background: url("../../images/icons/ruble.svg") no-repeat center / contain;
+  }
+}

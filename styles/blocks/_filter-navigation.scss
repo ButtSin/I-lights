@@ -1,0 +1,46 @@
+@use "../helpers/index" as *;
+
+.filter-navigation {
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px 9px;
+
+    color:var(--color-dirty-grey);
+
+    @include tablet-s {
+      flex-wrap: nowrap;
+      padding-bottom: 10px;
+      gap: 11px;
+
+      overflow-x: scroll;
+    }
+  }
+
+  &__button {
+    width: max-content;
+    --button-height: 38px;
+    padding: 10px 21px;
+
+    @include hover {
+      outline-offset: -1px;
+    }
+
+    &:focus-visible {
+      outline-offset: -2px;
+    }
+
+    @include tablet-s {
+      flex-wrap: nowrap;
+      
+      padding-inline: 14px;
+      padding-bottom: 10px;
+    }
+    
+    &.is-active {
+      color: var(--color-light);
+
+      background-color: var(--color-pale-blue);
+    }
+  }
+}

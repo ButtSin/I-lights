@@ -1,0 +1,166 @@
+@use "../helpers/index" as *;
+
+.modal {
+  position: fixed;
+
+  width: 500px;
+  padding: 21px 20px;
+
+  border: none;
+
+  overflow: hidden;
+  
+  &::backdrop {    
+    background: var(--color-light-orange);
+    opacity: 0.1;
+  }
+
+  &:modal {
+    max-width: 100%;
+  }
+
+  @include tablet-s {
+    padding: 11px 10px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &--little {
+    .modal__wrapper-description {
+      margin-block: 36px 34px;
+    }
+
+    .modal__wrapper-input {
+      padding-bottom: 5px;
+
+      &-checkbox {
+        margin-top: 10px;
+
+        @include mobile {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .modal__button-submit {
+      margin-top: 30px;
+
+      @include tablet-s {
+        margin-top: 19px;
+      }
+    }
+  }
+
+  &--text-thanks {
+    min-height: 230px;
+    
+    .modal__wrapper-description {
+      margin-block: 50px 10px;
+
+      &--little, &--very-little {
+        margin-block: 10px 0;
+      }
+    }
+  }
+
+  &--text-thanks-mail {
+    min-height: 230px;
+    
+    .modal__wrapper-description {
+      margin-block: 42px 1px;
+
+      &--little {
+        margin-block: 1px 10px;
+      }
+
+      &--very-little {
+        margin-block: 0 10px;
+
+        @include tablet-s {
+          padding-inline: 29.5px;
+        }
+      }
+    }
+  }
+
+  &__close-button {
+    width: 25px;
+    height: 25px;
+    margin: -4px -7.5px 0 auto;
+
+    &-icon {
+      &::after, &::before {
+        width: 13px;
+        height: 3.5px;
+
+        @include mobile {
+          width: 11px;
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    &-description {
+      display: block;
+      margin-block: 31px 37.5px;
+
+      font-size: rem(18);
+      text-align: center;
+      font-weight: 700;
+    
+      &--little {
+        font-size: rem(16);
+        font-weight: 600;
+
+        @include tablet-s {
+          padding-inline: 40px;
+
+          font-size: rem(14);
+        }
+      }
+
+      &--very-little {
+        font-size: rem(14);
+        font-weight: 400;
+
+        @include tablet-s {
+          padding-inline: 40px;
+
+          font-size: rem(12);
+        }
+      }
+    }
+
+    &-input {
+      width: 100%;
+      padding-bottom: 8px;
+      margin-bottom: 21.5px;
+      margin-left: 1px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &-checkbox {
+        margin-top: 15px;
+        
+        @include mobile {
+          margin-top: 5px;     
+        }
+      }
+    }
+  }
+
+  &__button-submit {
+    width: 100%;
+    margin-top: 30px;
+
+    @include tablet-s {
+      margin-top: 20px;
+    }
+  }
+}
