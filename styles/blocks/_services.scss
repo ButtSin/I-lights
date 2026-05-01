@@ -14,7 +14,7 @@
   @include mobile {
     margin-bottom: 44px;
   }
-  
+
   &__header {
     margin-bottom: 44px;
 
@@ -52,7 +52,7 @@
     @include tablet-s {
       margin-left: 64px;
       padding-block: 20px 15px;
-      
+
       line-height: 1.57;
     }
 
@@ -66,11 +66,13 @@
         content: "";
         width: 41px;
         height: var(--servicesItemAfterHeigth);
-        
-        background: url("/images/services/#{$i}.svg") no-repeat center / contain;
+
+        background: url("../../i-lights/images/services/#{$i}.svg")
+          no-repeat
+          center /
+          contain;
 
         @include tablet {
-          
           right: calc(100% + 20px);
         }
 
@@ -127,11 +129,11 @@
 
       .services__accordion-indicator {
         &::after {
-          rotate:  135deg;
+          rotate: 135deg;
         }
 
         &::before {
-          rotate:  45deg;
+          rotate: 45deg;
         }
       }
     }
@@ -174,7 +176,7 @@
 
     &-indicator {
       display: block;
-      align-self:flex-start;
+      align-self: flex-start;
       margin: 5px 3px 0 20px;
 
       color: var(--color-light-orange);
@@ -184,16 +186,16 @@
       position: relative;
 
       padding-right: rem(50);
-      
+
       color: inherit;
-      
-      transition-duration: var(--transition-duration);  
+
+      transition-duration: var(--transition-duration);
     }
 
     &-content {
       display: grid;
       grid-template-rows: 0fr;
-      
+
       transition-duration: 0.3s;
 
       &-inner {

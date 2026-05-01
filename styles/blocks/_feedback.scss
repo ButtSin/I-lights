@@ -48,7 +48,8 @@
 
       @include square(164px);
 
-      background: url("../../images/feedback/question.svg") center no-repeat;
+      background: url("../../i-lights/images/feedback/question.svg") center
+        no-repeat;
 
       @include desktop-s {
         translate: 90px -55px;
@@ -116,12 +117,13 @@
       }
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       position: absolute;
 
       content: "";
       display: block;
-      
+
       background-color: #fcfcfc;
 
       pointer-events: none;
@@ -156,21 +158,21 @@
     &::after {
       right: 0;
       bottom: 0;
-   
+
       width: 8px;
       height: 8px;
       z-index: 2;
 
-      background: url("../../images/feedback/corner.svg") no-repeat center 
-        / contain;
+      background: url("../../i-lights/images/feedback/corner.svg") no-repeat
+        center / contain;
 
       @include tablet-s {
         bottom: 1px;
 
-        background-image: url("../../images/feedback/corner-mobile.svg");
+        background-image: url("../../i-lights/images/feedback/corner-mobile.svg");
       }
     }
-    
+
     @include tablet-s {
       width: 100%;
     }

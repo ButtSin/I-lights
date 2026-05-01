@@ -3,7 +3,7 @@
 .cart-item {
   display: grid;
   grid-template-columns: var(--cartTemplateColumns);
-  grid-template-rows: var(--cartTemplateRows);  
+  grid-template-rows: var(--cartTemplateRows);
   align-items: center;
   padding-block: 17px 46px;
 
@@ -44,7 +44,7 @@
       &-link {
         margin-top: -9px;
         margin-left: 19px;
-  
+
         @include mobile {
           margin: 0 5px 0 10px;
         }
@@ -63,7 +63,7 @@
       &-list {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        grid-template-columns:  auto;
+        grid-template-columns: auto;
         grid-auto-flow: column;
         justify-content: start;
         column-gap: 9.5%;
@@ -95,7 +95,7 @@
 
         @include mobile {
           display: inline-flex;
-  
+
           letter-spacing: 0.1px;
         }
       }
@@ -159,7 +159,7 @@
     }
 
     @include mobile {
-      width: 94%
+      width: 94%;
     }
 
     &-link {
@@ -227,7 +227,7 @@
 
   &__wrapper {
     align-self: flex-start;
-    
+
     @include tablet {
       margin-inline: auto;
     }
@@ -276,7 +276,7 @@
           content: "";
           width: 98%;
           height: 1px;
-          
+
           background-color: var(--color-grey);
         }
       }
@@ -285,11 +285,11 @@
     &-item {
       display: inline-flex;
       align-items: center;
-      
+
       line-height: 1.52;
       text-align: center;
 
-      &:nth-child(3n+4) {
+      &:nth-child(3n + 4) {
         position: relative;
 
         &::before {
@@ -304,7 +304,7 @@
 
           @include tablet-s {
             top: -16px;
-            left: 3px;  
+            left: 3px;
             height: 44px;
           }
         }
@@ -323,7 +323,7 @@
     }
   }
 
-  &__counter { 
+  &__counter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -331,14 +331,14 @@
     margin-top: 50px;
 
     @include tablet {
-      grid-area:  2 / 2 / 3 / 3;
+      grid-area: 2 / 2 / 3 / 3;
       margin-inline: auto;
     }
 
     @include mobile {
       margin: 34px 0 0 2px;
     }
-    
+
     &-wrapper {
       display: flex;
       align-items: center;
@@ -370,17 +370,17 @@
       @include mobile {
         &--left {
           margin-right: 40px;
-          
+
           border-radius: 2px 2px 0 0;
         }
-  
+
         &--right {
           border-radius: 0 0 2px 2px;
         }
       }
     }
 
-    &-value {      
+    &-value {
       width: 40px;
       height: 100%;
       padding-inline: 5px;
@@ -398,7 +398,7 @@
       @include mobile {
         position: absolute;
         left: 22px;
-        
+
         width: 44px;
       }
     }
@@ -420,7 +420,7 @@
           width: 10px;
           height: 7px;
 
-          background: url("../../images/icons/check-mark.svg");
+          background: url("../../i-lights/images/icons/check-mark.svg");
         }
       }
     }
@@ -453,7 +453,7 @@
 
   &__delete-button {
     position: relative;
-    
+
     width: auto;
     height: 20px;
     padding-left: 20px;
@@ -486,7 +486,8 @@
       margin-top: -6.5px;
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       top: 0;
       left: 0;
       translate: -1px 9px;
@@ -527,7 +528,8 @@
       justify-self: right;
       padding: 0;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         translate: -5.5px -1px;
 
         width: 10.5px;

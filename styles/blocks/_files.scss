@@ -20,32 +20,33 @@
 
     &-title {
       position: relative;
-  
+
       margin-top: 58px;
-  
+
       font-size: rem(20);
-  
+
       &::before {
         position: absolute;
         translate: calc(-50% + 1px) calc(-50% + 8px);
         z-index: -1;
-        
+
         content: "";
         width: 133px;
         height: 133px;
-        
-        background: url("../../images/files/document.svg") center no-repeat;
-  
+
+        background: url("../../i-lights/images/files/document.svg") center
+          no-repeat;
+
         @include desktop-l {
           translate: calc(40% + 1px) calc(-40% + 8px);
           rotate: -35deg;
         }
-  
+
         @include tablet {
           display: none;
         }
       }
-  
+
       @include tablet {
         margin-block: 0 18.5px;
 
@@ -97,7 +98,7 @@
 
     &:first-child {
       position: relative;
-      
+
       margin-top: -10px;
 
       .files__actions {
@@ -106,7 +107,7 @@
       }
 
       @include tablet-s {
-        margin-top: 1px
+        margin-top: 1px;
       }
     }
 
@@ -143,7 +144,7 @@
         font-weight: 700;
         text-decoration: underline;
         text-decoration-skip-ink: none;
-  
+
         @media (hover: none) {
           transition-duration: 0s;
         }
@@ -184,12 +185,13 @@
     display: flex;
     margin-right: 10px;
 
-    &-link, &-download {
+    &-link,
+    &-download {
       position: relative;
       top: calc(-1 * var(--filesIconFocusDisplacement) - 1px);
-      
+
       padding-block: var(--filesIconFocusDisplacement);
-      
+
       transition-duration: var(--transition-duration);
 
       @include hover(itself) {

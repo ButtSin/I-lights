@@ -13,7 +13,7 @@
   }
 
   @include tablet {
-    --cartTemplateColumns:  25% 1fr 25%;
+    --cartTemplateColumns: 25% 1fr 25%;
     --cartTemplateRows: auto auto;
     margin-bottom: 38px;
   }
@@ -45,11 +45,11 @@
     @include tablet {
       display: none;
     }
-    
+
     &-list {
       display: grid;
       grid-template-columns: var(--cartTemplateColumns);
-      grid-template-rows: var(--cartTemplateRows);  
+      grid-template-rows: var(--cartTemplateRows);
 
       letter-spacing: -0.01rem;
     }
@@ -85,7 +85,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: var(--cartTemplateColumns);
-    grid-template-rows: var(--cartTemplateRows);  
+    grid-template-rows: var(--cartTemplateRows);
     margin-top: 26px;
 
     @include tablet-s {
@@ -117,9 +117,9 @@
       content: "";
       width: 10px;
       height: 10px;
-      
-      background: url("./../../images/icons/arrow-left.svg") no-repeat 
-        center  / contain;
+
+      background: url("./../../i-lights/images/icons/arrow-left.svg") no-repeat
+        center / contain;
       filter: invert(70%);
 
       transition-duration: var(--transition-duration);
@@ -195,7 +195,7 @@
       flex-shrink: 0;
 
       @include tablet {
-        width: 100%;  
+        width: 100%;
       }
 
       &--dark-border {

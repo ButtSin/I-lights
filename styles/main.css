@@ -2201,7 +2201,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("/images/services/1.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/services/1.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(1)::after, .services__item:nth-child(1)::after {
@@ -2222,7 +2222,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("/images/services/2.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/services/2.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(2)::after, .services__item:nth-child(2)::after {
@@ -2243,7 +2243,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("/images/services/3.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/services/3.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(3)::after, .services__item:nth-child(3)::after {
@@ -2264,7 +2264,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("/images/services/4.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/services/4.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(4)::after, .services__item:nth-child(4)::after {
@@ -2285,7 +2285,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("/images/services/5.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/services/5.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(5)::after, .services__item:nth-child(5)::after {
@@ -2534,7 +2534,6 @@ h4, .h4 {
   height: 100%;
   padding-top: var(--productCardWattsMinHeigth);
   border: var(--border-grey);
-  transition-duration: var(--transition-duration);
 }
 .product-card:focus-within {
   box-shadow: var(--shadow-orange);
@@ -2569,6 +2568,9 @@ h4, .h4 {
     transition-duration: 0s;
     box-shadow: 0 0 15px 0 rgba(255, 201, 79, 0.3);
   }
+}
+.product-card {
+  transition-duration: var(--transition-duration);
 }
 .product-card:focus-within .product-card__body-price {
   color: var(--color-light-orange);
@@ -2829,12 +2831,12 @@ h4, .h4 {
   }
 }
 @media (hover: none) {
+  .product-card__footer-button:active *::after, .product-card__footer-button:active *::before {
+    transition-duration: 0s;
+  }
   .product-card__footer-button:active {
     color: var(--color-light-orange);
     background-color: var(--color-light-grey);
-  }
-  .product-card__footer-button:active *::after, .product-card__footer-button:active *::before {
-    transition-duration: 0s;
   }
 }
 @media (width <= 31.31125rem) {
@@ -2923,7 +2925,7 @@ h4, .h4 {
   content: "";
   width: var(--downloadIconSize);
   height: var(--downloadIconSize);
-  background: url("../../images/files/arrow-down.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/files/arrow-down.svg") no-repeat center/contain;
 }
 
 .files {
@@ -2957,7 +2959,7 @@ h4, .h4 {
   content: "";
   width: 133px;
   height: 133px;
-  background: url("../../images/files/document.svg") center no-repeat;
+  background: url("../../i-lights/images/files/document.svg") center no-repeat;
 }
 @media (width <= 88.81125rem) {
   .files__header-title::before {
@@ -3145,12 +3147,6 @@ h4, .h4 {
   font-weight: 400;
   border-bottom: var(--border-light-grey);
   outline: none;
-  /*При масштабировании страницы от 100% до ~30% страницы в firefox 
-  увеличивается размер иконки resize. При ~30% 
-  масштаба иконка-треугольник у textarea начинает выходить за 
-  рамки своего элемента. Поэтому здесь изменяется z-index для корректного
-  отображения этой иконки, при котором она не будет перекрывать элементы с  
-  заданным модификатором.*/
 }
 .input-text:focus-visible {
   border-bottom: var(--outline);
@@ -3164,6 +3160,14 @@ h4, .h4 {
 .input-text--textarea {
   position: relative;
   resize: vertical;
+}
+.input-text {
+  /*При масштабировании страницы от 100% до ~30% страницы в firefox 
+  увеличивается размер иконки resize. При ~30% 
+  масштаба иконка-треугольник у textarea начинает выходить за 
+  рамки своего элемента. Поэтому здесь изменяется z-index для корректного
+  отображения этой иконки, при котором она не будет перекрывать элементы с  
+  заданным модификатором.*/
 }
 .input-text--big-z-index {
   z-index: calc(var(--feedbackTextareaWrapperZIndex) + 1);
@@ -3214,7 +3218,7 @@ h4, .h4 {
   z-index: -1;
   width: 164px;
   height: 164px;
-  background: url("../../images/feedback/question.svg") center no-repeat;
+  background: url("../../i-lights/images/feedback/question.svg") center no-repeat;
 }
 @media (width <= 71.93625rem) {
   .feedback__description::before {
@@ -3314,12 +3318,12 @@ h4, .h4 {
   width: 8px;
   height: 8px;
   z-index: 2;
-  background: url("../../images/feedback/corner.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/feedback/corner.svg") no-repeat center/contain;
 }
 @media (width <= 47.99875rem) {
   .feedback__textarea-wrapper::after {
     bottom: 1px;
-    background-image: url("../../images/feedback/corner-mobile.svg");
+    background-image: url("../../i-lights/images/feedback/corner-mobile.svg");
   }
 }
 @media (width <= 47.99875rem) {
@@ -4073,7 +4077,6 @@ h4, .h4 {
 }
 .input-range__control {
   align-self: center;
-  transition-duration: var(--transition-duration);
 }
 .input-range__control::after, .input-range__control::before {
   position: absolute;
@@ -4138,6 +4141,9 @@ h4, .h4 {
   outline: none;
   box-shadow: 0 0 4px 0 var(--color-blue);
   filter: brightness(90%);
+}
+.input-range__control {
+  transition-duration: var(--transition-duration);
 }
 @media (hover: hover) {
   .input-range__control:hover {
@@ -4207,7 +4213,7 @@ h4, .h4 {
   content: "";
   width: 13px;
   aspect-ratio: 1;
-  background: url("../../images/icons/filter.svg") no-repeat right/contain;
+  background: url("../../i-lights/images/icons/filter.svg") no-repeat right/contain;
 }
 @media (width <= 47.99875rem) {
   .filter__header {
@@ -4319,7 +4325,7 @@ h4, .h4 {
   width: 11px;
   height: 11px;
   color: var(--color-dark);
-  background: url("../../images/icons/arrow-left.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/icons/arrow-left.svg") no-repeat center/contain;
   filter: invert(32%);
   transition-duration: var(--transition-duration);
 }
@@ -4474,7 +4480,7 @@ h4, .h4 {
   content: "";
   width: 8px;
   height: 9px;
-  background: url("../../images/icons/ruble.svg") no-repeat center/contain;
+  background: url("../../i-lights/images/icons/ruble.svg") no-repeat center/contain;
 }
 
 .input-checkbox {
@@ -4833,7 +4839,7 @@ h4, .h4 {
   content: "";
   width: 10px;
   height: 10px;
-  background: url("./../../images/icons/arrow-left.svg") no-repeat center/contain;
+  background: url("./../../i-lights/images/icons/arrow-left.svg") no-repeat center/contain;
   filter: invert(70%);
   transition-duration: var(--transition-duration);
 }
@@ -4848,10 +4854,12 @@ h4, .h4 {
 @media (hover: none) {
   .cart-products__link:active {
     transition-duration: 0s;
-    color: var(--color-light-orange);
   }
   .cart-products__link:active::before {
     transition-duration: 0s;
+  }
+  .cart-products__link:active {
+    color: var(--color-light-orange);
   }
   .cart-products__link:active::before {
     filter: invert(20%);
@@ -5335,7 +5343,7 @@ h4, .h4 {
   content: "";
   width: 10px;
   height: 7px;
-  background: url("../../images/icons/check-mark.svg");
+  background: url("../../i-lights/images/icons/check-mark.svg");
 }
 .cart-item__price {
   width: -moz-fit-content;

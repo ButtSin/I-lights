@@ -1,701 +1,900 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="I-LIGHTS - Ваш надежный партнер в сфере коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные светотехнические решения для магазинов, офисов и развлекательных объектов. От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых и предназначенных для отдыха пространств.">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I-LIGHTS - Ваш надежный партнер в сфере коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные светотехнические решения для магазинов, офисов и развлекательных объектов. От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых и предназначенных для отдыха пространств."
+    />
 
-  <link href="/styles/main.css" rel="stylesheet">
-  <script src="./scripts/main.js" type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js"
+      defer
+    ></script>
 
-  <title>Подборка I-LIGHTS - Эффективные решения</title>
-</head>
-<body>
-  <header class="header header--mb">
-    <div class="header__inner container">
-      <a class="header__logo" href="index.html">
-        <img class="logo" src="./images/logo.webp" 
-          alt="Логотип сайта I-LIGHTS - Эффективные решения" width="75" 
-            height="48">
-      </a>
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link" 
-              href="about-company.html">О&nbsp;компании</a>
+    <link href="styles/main.css" rel="stylesheet" />
+    <script src="scripts/main.js" type="module"></script>
+
+    <title>Подборка I-LIGHTS - Эффективные решения</title>
+  </head>
+  <body>
+    <header class="header header--mb">
+      <div class="header__inner container">
+        <a class="header__logo" href="index.html">
+          <img
+            class="logo"
+            src="./images/logo.webp"
+            alt="Логотип сайта I-LIGHTS - Эффективные решения"
+            width="75"
+            height="48"
+          />
+        </a>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link header__menu-link"
+                href="about-company.html"
+                >О&nbsp;компании</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="company-services.html"
+                >Услуги</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Проекты</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="about-ordering.html"
+                >Доставка и оплата</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Контакты</a>
+            </li>
+            <li class="header__menu-item link-icon">
+              <a
+                class="header__menu-link header__menu-link--big link-icon__inner"
+                href="cart.html"
+              >
+                <span
+                  class="link-icon__inner-label link-icon__inner-label--light-yellow"
+                >
+                  Подборка
+                </span>
+                <span
+                  class="link-icon__inner-icon link-icon__inner-icon--hover-bg cross-button"
+                >
+                  <span class="cross-icon cross-icon--very-little"></span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="header__contacts">
+          <ul class="header__contacts-list">
+            <li class="header__contacts-item">
+              <a class="header__email link-icon" href="mailto:info@i-lights.ru">
+                <div class="header__email-inner link-icon__inner">
+                  <svg
+                    class="link-icon__inner-icon"
+                    width="15"
+                    height="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"
+                    />
+                  </svg>
+                  <span class="link-icon__inner-label">info@i-lights.ru</span>
+                </div>
+              </a>
+            </li>
+            <li class="header__contacts-item">
+              <a
+                class="header__tel link-icon button button--dark-blue button--little"
+                href="tel:+74952335557"
+              >
+                <div class="header__tel-inner link-icon__inner">
+                  <svg
+                    class="link-icon__inner-icon link-icon__inner-icon--stroke"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a"><path d="M0 0h16v16H0z" /></clipPath>
+                    </defs>
+                  </svg>
+                  <span class="link-icon__inner-label">
+                    +7 (495) 233 55 57
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </address>
+        <button
+          class="header__burger-button burger-button reset-button visible-tablet"
+          type="button"
+          onclick="
+            mobileOverlay.showModal();
+            document.body.style.overflow = 'hidden';
+          "
+        >
+          <span class="visually-hidden">Открыть навигационное меню</span>
+        </button>
+      </div>
+    </header>
+    <main class="content cart">
+      <nav
+        class="breadcrumbs cart__breadcrumbs container"
+        aria-label="Хлебные крошки"
+      >
+        <ol class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html"> Главная </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="company-services.html">Услуги</a>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="cart.html" aria-current="page">
+              Подборка
+            </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">Проекты</a>
+        </ol>
+      </nav>
+      <section
+        class="section container cart-products"
+        data-js-cart
+        aria-labelledby="cart-title"
+      >
+        <header class="section__header cart-products__header">
+          <h1
+            id="cart-title"
+            class="section__header-title cart-products__header-title"
+          >
+            Подборка
+          </h1>
+        </header>
+        <form class="cart-products__body" data-js-cart-form>
+          <div class="cart-products__description">
+            <ul class="cart-products__description-list">
+              <li class="cart-products__description-item">Товар</li>
+              <li class="cart-products__description-item">Описание</li>
+              <li class="cart-products__description-item">Количество</li>
+              <li class="cart-products__description-item">Сумма</li>
+              <li class="cart-products__description-item">Код: 54637654</li>
+            </ul>
+          </div>
+          <ul class="cart-products__list">
+            <li class="cart-products__item">
+              <section class="cart-item cart-item--columns shadow">
+                <a
+                  class="cart-item__image-link"
+                  href="product.html"
+                  tabindex="-1"
+                >
+                  <img
+                    class="cart-item__image"
+                    src="./images/products/EVO-L.webp"
+                    width="98"
+                    height="98"
+                    alt="Трековый светильник EVO L"
+                  />
+                </a>
+                <div class="cart-item__wrapper">
+                  <a class="cart-item__title-link" href="product.html">
+                    <h2 id="product-name-1" class="cart-item__title">
+                      Трековый светильник EVO L
+                    </h2>
+                  </a>
+                  <div class="cart-item__description">
+                    <ul class="cart-item__description-list">
+                      <li class="cart-item__description-item">50Вт</li>
+                      <li class="cart-item__description-item">Серый</li>
+                      <li class="cart-item__description-item">CRI/Ra 80+</li>
+                      <li class="cart-item__description-item">85</li>
+                      <li class="cart-item__description-item">3000</li>
+                      <li class="cart-item__description-item">1672 LED</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-item__counter">
+                  <div class="cart-item__counter-wrapper">
+                    <button
+                      class="cart-item__counter-button reset-button button cart-item__counter-button--left"
+                      type="button"
+                      aria-label="Уменьшить количество товара"
+                      aria-describedby="product-availability-1 product-name-1 product-price-1"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="cart-item__counter-value reset-input-number"
+                      data-js-cart-input
+                      type="number"
+                      value="1"
+                      min="1"
+                      max="10"
+                      name="product_0001"
+                      inputmode="numeric"
+                      aria-labelledby="product-availability-1 product-name-1 product-price-1"
+                    />
+                    <button
+                      class="cart-item__counter-button reset-button button cart-item__counter-button--right"
+                      type="button"
+                      aria-label="Увеличить количество товара"
+                      aria-describedby="product-availability-1 product-name-1 product-price-1"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p
+                    id="product-availability-1"
+                    class="cart-item__counter-info"
+                    aria-live="polite"
+                  >
+                    Осталось 2 шт
+                  </p>
+                </div>
+                <div
+                  id="product-price-1"
+                  class="cart-item__price currency"
+                  aria-label="от 3300 рублей"
+                >
+                  от 3 300
+                </div>
+                <button
+                  class="cart-item__delete-button reset-button cross-icon cross-icon--rotated"
+                  type="button"
+                  aria-label="Удалить товар из подборки"
+                  aria-describedby="product-name-1 product-price-1"
+                >
+                  <span class="hidden-mobile">Удалить</span>
+                </button>
+              </section>
+            </li>
+            <li class="cart-products__item">
+              <section class="cart-item shadow">
+                <a
+                  class="cart-item__image-link"
+                  href="product.html"
+                  tabindex="-1"
+                >
+                  <img
+                    class="cart-item__image"
+                    src="./images/products/custom-lamp.webp"
+                    width="123"
+                    height="69"
+                    alt="Дизайнерский светильник изготавливаемый по проекту"
+                  />
+                </a>
+                <div class="cart-item__wrapper">
+                  <a
+                    id="product-name-2"
+                    class="cart-item__title-link"
+                    href="product.html"
+                  >
+                    <h2 class="cart-item__title">
+                      Дизайнерский светильник изготавливаемый по проекту
+                    </h2>
+                  </a>
+                  <div class="cart-item__description">
+                    <ul class="cart-item__description-list">
+                      <li class="cart-item__description-item">
+                        Длинна до 3 метров.
+                      </li>
+                      <li class="cart-item__description-item">
+                        Углы поворота между секторами по проекту.
+                      </li>
+                      <li class="cart-item__description-item">
+                        Мощность рассчитывается индивидуально.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-item__counter">
+                  <div class="cart-item__counter-wrapper">
+                    <button
+                      class="cart-item__counter-button reset-button button cart-item__counter-button--left"
+                      type="button"
+                      aria-label="Уменьшить количество товара"
+                      aria-describedby="product-availability-2 product-name-2 product-price-2"
+                    >
+                      -
+                    </button>
+                    <input
+                      class="cart-item__counter-value reset-input-number"
+                      data-js-cart-input
+                      type="number"
+                      value="2"
+                      min="1"
+                      max="10"
+                      name="product_0002"
+                      inputmode="numeric"
+                      aria-labelledby="product-availability-2 product-name-2 product-price-2"
+                    />
+                    <button
+                      class="cart-item__counter-button reset-button button cart-item__counter-button--right"
+                      type="button"
+                      aria-label="Увеличить количество товара"
+                      aria-describedby="product-availability-2 product-name-2 product-price-2"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p
+                    id="product-availability-2"
+                    class="cart-item__counter-info cart-item__counter-info--boolean"
+                    aria-live="polite"
+                  >
+                    В наличии
+                  </p>
+                </div>
+                <div
+                  id="product-price-2"
+                  class="cart-item__price currency"
+                  aria-label="от 888888888 рублей"
+                >
+                  от 888 888 888
+                </div>
+                <button
+                  class="cart-item__delete-button reset-button cross-icon cross-icon--rotated"
+                  type="button"
+                  aria-label="Удалить товар из подборки"
+                  aria-describedby="product-name-2 product-price-2"
+                >
+                  <span class="hidden-mobile">Удалить</span>
+                </button>
+              </section>
+            </li>
+          </ul>
+          <div class="cart-products__wrapper">
+            <a class="cart-products__link" href="catalog.html"> К покупкам </a>
+            <p
+              id="product-prices"
+              class="cart-products__price currency"
+              aria-label="от 888388828881 рублей"
+            >
+              Итого: от 888 388 828 881
+            </p>
+          </div>
+          <div class="cart-products__actions">
+            <button
+              class="cart-products__actions-button cart-products__actions-button--dark-border button reset-button pagination-button"
+              type="button"
+              onclick="modalMail.showModal()"
+              aria-describedby="product-prices"
+            >
+              Отправить подборку на почту
+            </button>
+            <button
+              class="cart-products__actions-button button button--light-orange reset-button"
+              type="button"
+              onclick="modalСalculation.showModal()"
+              aria-describedby="product-prices"
+            >
+              Отправить заявку на расчет
+            </button>
+          </div>
+        </form>
+        <div class="cart-products__modals">
+          <dialog
+            id="modalMail"
+            class="modal modal--little"
+            aria-labelledby="modalMailTitle"
+          >
+            <button
+              class="modal__close-button cross-button cross-button--rotated reset-button"
+              type="button"
+              onclick="modalMail.close()"
+            >
+              <span
+                class="modal__close-button-icon cross-icon cross-icon--big"
+              ></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно отправки подборки на почту
+              </span>
+            </button>
+            <form
+              class="modal__wrapper"
+              data-js-cart-form-mail
+              action=""
+              method=""
+            >
+              <h2 id="modalMailTitle" class="visually-hidden">
+                Отправка подборки на почту
+              </h2>
+              <label for="inputMail" class="modal__wrapper-description">
+                Введите адрес электронной почты
+              </label>
+              <input
+                class="modal__wrapper-input input-text input-text--big-z-index reset-input-text"
+                name="email"
+                placeholder="Ваш e-mail*"
+                type="email"
+                id="inputMail"
+                required
+              />
+              <label class="modal__wrapper-input-checkbox input-checkbox">
+                <input
+                  class="modal__wrapper-input input-checkbox__default visually-hidden"
+                  type="checkbox"
+                  name="personal-data-processing"
+                  required
+                />
+                <span class="input-checkbox__indicator"></span>
+                <span class="input-checkbox__text">
+                  Даю согласие на
+                  <span class="input-checkbox__text-underline">
+                    обработку персональных данных
+                  </span>
+                </span>
+              </label>
+              <button
+                class="modal__button-submit button button--light-orange reset-button"
+                type="submit"
+              >
+                Отправить
+              </button>
+            </form>
+          </dialog>
+          <dialog
+            id="modalСalculation"
+            class="modal"
+            aria-labelledby="modalСalculationTitle"
+          >
+            <button
+              class="modal__close-button cross-button cross-button--rotated reset-button"
+              type="button"
+              onclick="modalСalculation.close()"
+            >
+              <span
+                class="modal__close-button-icon cross-icon cross-icon--big"
+              ></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно отправки заявки на расчёт
+              </span>
+            </button>
+            <form class="modal__wrapper" data-js-cart-form-calc>
+              <h2 id="modalСalculationTitle" class="visually-hidden">
+                Отправка подборки на расчёт
+              </h2>
+              <strong class="modal__wrapper-description">
+                Введите следующие данные
+              </strong>
+              <input
+                class="modal__wrapper-input input-text input-text--big-z-index reset-input-text"
+                name="name"
+                placeholder="Ваше имя*"
+                required
+              />
+              <input
+                class="modal__wrapper-input input-text input-text--big-z-index reset-input-text"
+                name="email"
+                placeholder="Ваш e-mail*"
+                type="email"
+                required
+              />
+              <input
+                class="modal__wrapper-input input-text input-text--big-z-index reset-input-text"
+                data-js-cart-input-tel
+                data-js-input-mask="+7 (000) 000-00-00"
+                name="tel"
+                placeholder="Ваш телефон*"
+                type="tel"
+                required
+              />
+              <label class="modal__wrapper-input-checkbox input-checkbox">
+                <input
+                  class="modal__wrapper-input input-checkbox__default visually-hidden"
+                  type="checkbox"
+                  name="personal-data-processing"
+                  required
+                />
+                <span class="input-checkbox__indicator"></span>
+                <span class="input-checkbox__text">
+                  Даю согласие на
+                  <span class="input-checkbox__text-underline">
+                    обработку персональных данных
+                  </span>
+                </span>
+              </label>
+              <button
+                class="modal__button-submit button button--light-orange reset-button"
+                type="submit"
+              >
+                Отправить
+              </button>
+            </form>
+          </dialog>
+          <dialog
+            id="modalThanks"
+            class="modal modal--text-thanks"
+            data-js-cart-dialog-calc-thanks
+          >
+            <button
+              class="modal__close-button cross-button cross-button--rotated reset-button"
+              type="button"
+              onclick="modalThanks.close()"
+            >
+              <span
+                class="modal__close-button-icon cross-icon cross-icon--big"
+              ></span>
+              <span class="visually-hidden"> Закрыть диалоговое окно </span>
+            </button>
+            <div class="modal__wrapper">
+              <p class="modal__wrapper-description">
+                Спасибо!
+                <strong
+                  class="modal__wrapper-description modal__wrapper-description--very-little"
+                >
+                  Выша заявка принята, в ближайшее время наш менеджер с Вами
+                  свяжется.
+                </strong>
+              </p>
+            </div>
+          </dialog>
+          <dialog
+            id="modalThanksMail"
+            class="modal modal--text-thanks-mail"
+            data-js-cart-dialog-mail-thanks
+          >
+            <button
+              class="modal__close-button cross-button cross-button--rotated reset-button"
+              type="button"
+              onclick="modalThanksMail.close()"
+            >
+              <span
+                class="modal__close-button-icon cross-icon cross-icon--big"
+              ></span>
+              <span class="visually-hidden"> Закрыть диалоговое окно </span>
+            </button>
+            <div class="modal__wrapper">
+              <p class="modal__wrapper-description">
+                Спасибо!
+                <strong
+                  class="modal__wrapper-description modal__wrapper-description--little"
+                >
+                  Проверьте почтовый ящик!
+                </strong>
+                <strong
+                  class="modal__wrapper-description modal__wrapper-description--very-little"
+                >
+                  На указанную почту была выслана подборка с выбранными товарами
+                </strong>
+              </p>
+            </div>
+          </dialog>
+        </div>
+      </section>
+      <p class="cart__empty-notification visually-hidden container">
+        <span> Ваша корзина пуста </span>
+        <a
+          class="cart__empty-notification-link cart-products__link"
+          href="catalog.html"
+        >
+          К покупкам
+        </a>
+      </p>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a class="footer__logo" href="index.html">
+          <img
+            class="logo footer__logo-image"
+            src="./images/logo-white.webp"
+            alt="Логотип сайта I-LIGHTS - Эффективные решения"
+            width="66"
+            height="42"
+            loading="lazy"
+          />
+        </a>
+        <p class="footer__copyright">
+          <span>©&nbsp;Technolight </span
+          ><!--
+        --><time datetime="2015-01-01">2015</time
+          ><!--
+        --><span>-</span
+          ><!--
+        --><time datetime="2021-12-31">2021</time>
+        </p>
+        <dl class="footer__navigation">
+          <div class="footer__navigation-block footer__catalog">
+            <dt class="footer__navigation-title footer__catalog-title">
+              <a class="footer__navigation-link" href="catalog.html">
+                Каталог товаров
+              </a>
+            </dt>
+            <dd
+              class="footer__navigation-description footer__catalog-description"
+            >
+              <ul class="footer__navigation-list footer__catalog-list">
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Трековые светильники
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Встраиваемые светильники
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Профильные светильники
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Фигурные светильники
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Светильники Армстронг
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Армстронг с равномерной засветкой
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Произовдители
+                  </a>
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="footer__navigation-block footer__ordering">
+            <dt class="footer__navigation-title footer__ordering-title">
+              <a class="footer__navigation-link" href="#"> Как заказать </a>
+            </dt>
+            <dd
+              class="footer__navigation-description footer__navigation-description"
+            >
+              <ul class="footer__navigation-list footer__ordering-list">
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#"> Оплата </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#"> Доставка </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Реквизиты компании
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#">
+                    Правовая информация
+                  </a>
+                </li>
+                <li class="footer__navigation-item">
+                  <a class="footer__navigation-link" href="#"> FAQ </a>
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="footer__navigation-block footer__contacts">
+            <dt class="footer__navigation-title footer__contacts-title">
+              <a class="footer__navigation-link" href="#"> Контакты </a>
+            </dt>
+            <dd
+              class="footer__navigation-description footer__contacts-description"
+            >
+              <address class="footer__address">
+                <ul class="footer__navigation-list footer__contacts-list">
+                  <li class="footer__navigation-item">
+                    <a
+                      class="footer__address-link footer__address-link--place link-icon"
+                      href="#"
+                    >
+                      <div class="link-icon__inner">
+                        <svg
+                          class="footer__address-icon footer__address-icon--place link-icon__inner-icon link-icon__inner-icon--light-orange"
+                          width="20"
+                          height="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 0a7.04 7.04 0 0 0-7.031 7.031c0 1.31.363 2.589 1.05 3.698l5.58 8.994a.586.586 0 0 0 .499.277h.004a.586.586 0 0 0 .498-.285l5.44-9.081a7.023 7.023 0 0 0 .991-3.603A7.04 7.04 0 0 0 10 0Zm5.034 10.032-4.945 8.256-5.075-8.177a5.852 5.852 0 0 1-.881-3.08A5.88 5.88 0 0 1 10 1.164c3.23 0 5.863 2.636 5.863 5.867 0 1.06-.29 2.097-.83 3.001Z"
+                            fill="#F3A800"
+                          />
+                          <path
+                            d="M10 3.516A3.52 3.52 0 0 0 6.484 7.03 3.511 3.511 0 0 0 10 10.547a3.509 3.509 0 0 0 3.516-3.516A3.52 3.52 0 0 0 10 3.516Zm0 5.867A2.353 2.353 0 0 1 7.648 7.03 2.36 2.36 0 0 1 10 4.68a2.357 2.357 0 0 1 2.348 2.351A2.349 2.349 0 0 1 10 9.383Z"
+                          />
+                        </svg>
+                        <span class="link-icon__inner-label">
+                          Место магазина
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="footer__navigation-item">
+                    <a
+                      class="footer__address-link footer__address-link--tel link-icon"
+                      href="tel:+74952335557"
+                    >
+                      <div class="link-icon__inner">
+                        <svg
+                          class="link-icon__inner-icon footer__address-icon footer__address-icon--tel link-icon__inner-icon--stroke link-icon__inner-icon--light-orange"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 16 17"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 3.43975C1 3.03091 1.16389 2.6388 1.45561 2.34971C1.74733 2.0606 2.143 1.89819 2.55556 1.89819H5.10667C5.26984 1.89831 5.42884 1.94929 5.56117 2.04391C5.69349 2.13852 5.79244 2.27199 5.844 2.42541L7.00911 5.88852C7.06814 6.06452 7.06116 6.25571 6.98944 6.42702C6.91773 6.59833 6.78608 6.73827 6.61867 6.82116L4.86322 7.69214C5.72369 9.57942 7.24902 11.091 9.15344 11.9438L10.0323 10.2041C10.116 10.0382 10.2572 9.90773 10.4301 9.83663C10.6029 9.76561 10.7959 9.75869 10.9734 9.81716L14.468 10.9718C14.6229 11.023 14.7577 11.1211 14.8532 11.2524C14.9487 11.3837 15 11.5414 15 11.7033V14.2306C15 14.6395 14.8361 15.0316 14.5444 15.3207C14.2527 15.6098 13.857 15.7722 13.4444 15.7722H12.6667C6.22356 15.7722 1 10.5956 1 4.21053V3.43975Z"
+                            stroke="#F3A800"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span class="link-icon__inner-label">
+                          +7 (495) 233 55 57
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="footer__navigation-item">
+                    <a
+                      class="footer__address-link footer__address-link--mail link-icon"
+                      href="mailto:info@i-lights.ru"
+                    >
+                      <div class="link-icon__inner">
+                        <svg
+                          class="link-icon__inner-icon footer__address-icon footer__address-icon--mail"
+                          viewBox="0 0 15 13"
+                          width="18"
+                          height="16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"
+                          />
+                        </svg>
+                        <span class="link-icon__inner-label">
+                          info@i-lights.ru
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </footer>
+    <dialog id="mobileOverlay" class="mobile-overlay visible-tablet">
+      <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button
+          class="mobile-overlay__close-button cross-button cross-button--rotated reset-button"
+          type="submit"
+          onclick="document.body.style.overflow = 'auto'"
+        >
+          <span class="cross-icon cross-icon--big"></span>
+          <span class="visually-hidden"> Закрыть навигационное меню </span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="about-company.html">
+              О&nbsp;компании
+            </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="about-ordering.html">Доставка и оплата</a>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="company-services.html"
+              >Услуги</a
+            >
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">Контакты</a>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Проекты</a>
           </li>
-          <li class="header__menu-item link-icon">
-            <a class="header__menu-link header__menu-link--big
-              link-icon__inner" href="cart.html">
-              <span class="link-icon__inner-label 
-                link-icon__inner-label--light-yellow">
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="about-ordering.html"
+              >Доставка и оплата</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Контакты</a>
+          </li>
+          <li
+            class="mobile-overlay__item mobile-overlay__item--relative-left link-icon"
+          >
+            <a
+              class="mobile-overlay__link link-icon__inner mobile-overlay__link--big"
+              href="cart.html"
+            >
+              <span
+                class="link-icon__inner-label link-icon__inner-label--light-yellow"
+              >
                 Подборка
               </span>
-              <span class="link-icon__inner-icon 
-                link-icon__inner-icon--hover-bg cross-button">
+              <span
+                class="mobile-overlay__link-icon link-icon__inner-icon link-icon__inner-icon--hover-bg cross-button"
+              >
                 <span class="cross-icon cross-icon--very-little"></span>
               </span>
             </a>
           </li>
-        </ul>  
-      </nav>
-      <address class="header__contacts">
-        <ul class="header__contacts-list">
-          <li class="header__contacts-item">
-            <a class="header__email link-icon" 
-              href="mailto:info@i-lights.ru">
-              <div class="header__email-inner link-icon__inner">
-                <svg class="link-icon__inner-icon" width="15" height="13" 
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>                
-                </svg>            
-                <span class="link-icon__inner-label">info@i-lights.ru</span>   
-              </div>
-            </a>
-          </li>
-          <li class="header__contacts-item">
-            <a class="header__tel link-icon button button--dark-blue
-             button--little" href="tel:+74952335557">
-              <div class="header__tel-inner link-icon__inner">
-                <svg class="link-icon__inner-icon 
-                  link-icon__inner-icon--stroke" width="16" height="16" 
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
-                </svg>
-                <span class="link-icon__inner-label">
-                  +7 (495) 233 55 57
-                </span>
-              </div>
-            </a>
-          </li>
         </ul>
-      </address>
-      <button class="header__burger-button burger-button reset-button 
-        visible-tablet" type="button" onclick="mobileOverlay.showModal(); document.body.style.overflow= 'hidden'">
-        <span class="visually-hidden">Открыть навигационное меню</span>
-      </button>
-    </div>
-  </header>
-  <main class="content cart">
-    <nav class="breadcrumbs cart__breadcrumbs container" 
-      aria-label="Хлебные крошки">
-      <ol class="breadcrumbs-list">
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="cart.html" 
-            aria-current="page">
-            Подборка
-          </a>
-        </li>
-      </ol>
-    </nav>
-    <section class="section container cart-products" data-js-cart aria-labelledby="cart-title">
-      <header class="section__header cart-products__header">
-        <h1 id="cart-title" class="section__header-title cart-products__header-title">
-          Подборка
-        </h1>
-      </header>
-      <form class="cart-products__body" data-js-cart-form>
-        <div class="cart-products__description">
-          <ul class="cart-products__description-list">
-            <li class="cart-products__description-item">
-              Товар
+        <address class="mobile-overlay__contacts visible-mobile">
+          <ul class="mobile-overlay__contacts-list">
+            <li class="mobile-overlay__contacts-item">
+              <a
+                class="mobile-overlay__email link-icon"
+                href="mailto:info@i-lights.ru"
+              >
+                <div class="mobile-overlay__email-inner link-icon__inner">
+                  <svg
+                    class="link-icon__inner-icon"
+                    width="15"
+                    height="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"
+                    />
+                  </svg>
+                  <span class="link-icon__inner-label">info@i-lights.ru</span>
+                </div>
+              </a>
             </li>
-            <li class="cart-products__description-item">
-              Описание
-            </li>
-            <li class="cart-products__description-item">
-              Количество
-            </li>
-            <li class="cart-products__description-item">
-              Сумма
-            </li>
-            <li class="cart-products__description-item">
-              Код: 54637654
+            <li class="mobile-overlay__contacts-item">
+              <a
+                class="mobile-overlay__tel link-icon button button--little button--little-pd button--dark-blue"
+                href="tel:+74952335557"
+              >
+                <div class="mobile-overlay__tel-inner link-icon__inner">
+                  <svg
+                    class="link-icon__inner-icon link-icon__inner-icon--stroke"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#a1)">
+                      <path
+                        d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a1"><path d="M0 0h16v16H0z" /></clipPath>
+                    </defs>
+                  </svg>
+                  <span class="link-icon__inner-label">
+                    +7 (495) 233 55 57
+                  </span>
+                </div>
+              </a>
             </li>
           </ul>
-        </div>
-        <ul class="cart-products__list">
-          <li class="cart-products__item">
-            <section class="cart-item cart-item--columns shadow">
-              <a class="cart-item__image-link" href="product.html" tabindex="-1"> 
-                <img class="cart-item__image" 
-                  src="./images/products/EVO-L.webp" width="98" height="98"
-                    alt="Трековый светильник EVO L">
-              </a>
-              <div class="cart-item__wrapper">
-                <a class="cart-item__title-link" href="product.html">
-                  <h2 id="product-name-1" class="cart-item__title">
-                    Трековый светильник EVO L
-                  </h2>
-                </a>
-                <div class="cart-item__description">
-                  <ul class="cart-item__description-list">
-                    <li class="cart-item__description-item">
-                      50Вт 
-                    </li>
-                    <li class="cart-item__description-item">
-                      Серый
-                    </li>
-                    <li class="cart-item__description-item">
-                      CRI/Ra 80+
-                    </li>
-                    <li class="cart-item__description-item">
-                      85 
-                    </li>
-                    <li class="cart-item__description-item">
-                      3000  
-                    </li>
-                    <li class="cart-item__description-item">
-                      1672 LED
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cart-item__counter">
-                <div class="cart-item__counter-wrapper">
-                  <button class="cart-item__counter-button reset-button button
-                    cart-item__counter-button--left" type="button"
-                        aria-label="Уменьшить количество товара" 
-                          aria-describedby="product-availability-1 product-name-1 product-price-1">
-                    -      
-                  </button>
-                  <input 
-                    class="cart-item__counter-value reset-input-number"
-                    data-js-cart-input
-                    type="number" 
-                    value="1" 
-                    min="1" 
-                    max="10" 
-                    name="product_0001" 
-                    inputmode="numeric" 
-                    aria-labelledby="product-availability-1 product-name-1 product-price-1"
-                  >
-                  <button class="cart-item__counter-button reset-button button
-                    cart-item__counter-button--right" type="button"
-                        aria-label="Увеличить количество товара" 
-                          aria-describedby="product-availability-1 product-name-1 product-price-1">
-                    +
-                  </button>
-                </div>
-                <p id="product-availability-1" class="cart-item__counter-info" aria-live="polite">
-                  Осталось 2 шт
-                </p>
-              </div>
-              <div id="product-price-1" class="cart-item__price currency" aria-label="от 3300 рублей">
-                от 3 300
-              </div>
-              <button class="cart-item__delete-button reset-button cross-icon
-                cross-icon--rotated"
-                  type="button" aria-label="Удалить товар из подборки" 
-                    aria-describedby="product-name-1 product-price-1">
-                <span class="hidden-mobile">Удалить</span>
-              </button>
-            </section>
-          </li>
-          <li class="cart-products__item">
-            <section class="cart-item shadow">
-              <a class="cart-item__image-link" href="product.html" tabindex="-1"> 
-                <img class="cart-item__image" 
-                  src="./images/products/custom-lamp.webp" width="123" 
-                    height="69"
-                    alt="Дизайнерский светильник изготавливаемый по проекту">
-              </a>
-              <div class="cart-item__wrapper">
-                <a id="product-name-2" class="cart-item__title-link" href="product.html">
-                  <h2 class="cart-item__title">
-                    Дизайнерский светильник изготавливаемый по проекту
-                  </h2>
-                </a>
-                <div class="cart-item__description">
-                  <ul class="cart-item__description-list">
-                    <li class="cart-item__description-item">
-                      Длинна до 3 метров. 
-                    </li>
-                    <li class="cart-item__description-item">
-                      Углы поворота между секторами по проекту.
-                    </li>
-                    <li class="cart-item__description-item">
-                      Мощность рассчитывается индивидуально.
-                    </li>
-                  </ul>
-                </div>
-              </div>    
-              <div class="cart-item__counter">
-                <div class="cart-item__counter-wrapper">
-                  <button class="cart-item__counter-button reset-button button
-                    cart-item__counter-button--left" type="button" 
-                        aria-label="Уменьшить количество товара" 
-                          aria-describedby="product-availability-2 product-name-2 product-price-2">
-                    -
-                  </button>
-                  <input 
-                    class="cart-item__counter-value reset-input-number" 
-                    data-js-cart-input
-                    type="number" 
-                    value="2" 
-                    min="1" 
-                    max="10" 
-                    name="product_0002" 
-                    inputmode="numeric" 
-                    aria-labelledby="product-availability-2 product-name-2 product-price-2"
-                  >
-                  <button class="cart-item__counter-button reset-button button
-                    cart-item__counter-button--right" type="button" 
-                        aria-label="Увеличить количество товара" 
-                          aria-describedby="product-availability-2 product-name-2 product-price-2">
-                    +
-                  </button>
-                </div>
-                <p id="product-availability-2" class="cart-item__counter-info
-                cart-item__counter-info--boolean" aria-live="polite">
-                  В наличии
-                </p>
-              </div>
-              <div id="product-price-2" class="cart-item__price currency" aria-label="от 888888888 рублей">
-                от 888 888 888
-              </div>
-              <button class="cart-item__delete-button reset-button  cross-icon
-                cross-icon--rotated"
-                  type="button" aria-label="Удалить товар из подборки" 
-                    aria-describedby="product-name-2 product-price-2">
-                <span class="hidden-mobile">Удалить</span>
-              </button>
-            </section>
-          </li>
-        </ul>
-        <div class="cart-products__wrapper">
-          <a class="cart-products__link" href="catalog.html">
-            К покупкам
-          </a>
-          <p id="product-prices" class="cart-products__price currency" aria-label="от 888388828881 рублей">
-            Итого: от 888 388 828 881
-          </p>
-        </div>
-        <div class="cart-products__actions">
-          <button class="cart-products__actions-button 
-            cart-products__actions-button--dark-border button reset-button 
-              pagination-button" type="button" 
-                onclick="modalMail.showModal()" aria-describedby="product-prices">
-            Отправить подборку на почту
-          </button>
-          <button class="cart-products__actions-button button 
-            button--light-orange reset-button" type="button" 
-              onclick="modalСalculation.showModal()" aria-describedby="product-prices">
-            Отправить заявку на расчет
-          </button> 
-        </div>
-      </form>
-      <div class="cart-products__modals">
-        <dialog 
-          id="modalMail" 
-          class="modal modal--little"
-          aria-labelledby="modalMailTitle"
-        >
-          <button 
-            class="modal__close-button cross-button cross-button--rotated reset-button" 
-            type="button" 
-            onclick="modalMail.close()"
-          >
-            <span class="modal__close-button-icon cross-icon cross-icon--big"></span>
-            <span class="visually-hidden">
-              Закрыть диалоговое окно отправки подборки на почту
-            </span>
-          </button>
-          <form class="modal__wrapper" data-js-cart-form-mail action="" method="">
-            <h2 id="modalMailTitle" class="visually-hidden">
-              Отправка подборки на почту
-            </h2>
-            <label for="inputMail" class="modal__wrapper-description">
-              Введите адрес электронной почты
-            </label>
-            <input 
-              class="modal__wrapper-input input-text input-text--big-z-index reset-input-text" 
-              name="email" 
-              placeholder="Ваш e-mail*" 
-              type="email"
-              id="inputMail" 
-              required
-            >
-            <label class="modal__wrapper-input-checkbox input-checkbox">
-              <input 
-                class="modal__wrapper-input input-checkbox__default visually-hidden" 
-                type="checkbox" 
-                name="personal-data-processing"
-                required
-              >
-              <span class="input-checkbox__indicator"></span>
-              <span class="input-checkbox__text">
-                Даю согласие на
-                  <span class="input-checkbox__text-underline">
-                    обработку персональных данных
-                  </span>
-              </span>
-            </label>
-            <button class="modal__button-submit button button--light-orange reset-button" 
-            type="submit">
-              Отправить
-            </button>   
-          </form>
-        </dialog>  
-        <dialog id="modalСalculation" class="modal" 
-          aria-labelledby="modalСalculationTitle">
-          <button class="modal__close-button cross-button 
-            cross-button--rotated reset-button" type="button" 
-              onclick="modalСalculation.close()">
-            <span class="modal__close-button-icon cross-icon 
-              cross-icon--big"></span>
-            <span class="visually-hidden">
-              Закрыть диалоговое окно отправки заявки на расчёт
-            </span>
-          </button>
-          <form class="modal__wrapper" data-js-cart-form-calc>
-            <h2 id="modalСalculationTitle" class="visually-hidden">
-              Отправка подборки на расчёт
-            </h2>
-            <strong class="modal__wrapper-description">
-              Введите следующие данные
-            </strong>
-            <input class="modal__wrapper-input input-text 
-              input-text--big-z-index reset-input-text" name="name" 
-                placeholder="Ваше имя*" required>
-            <input class="modal__wrapper-input input-text 
-              input-text--big-z-index reset-input-text" name="email" 
-                placeholder="Ваш e-mail*" type="email" required>
-            <input class="modal__wrapper-input input-text 
-              input-text--big-z-index reset-input-text" data-js-cart-input-tel data-js-input-mask="+7 (000) 000-00-00" 
-                name="tel" placeholder="Ваш телефон*" type="tel" required>
-            <label class="modal__wrapper-input-checkbox input-checkbox">
-              <input class="modal__wrapper-input input-checkbox__default 
-                visually-hidden" type="checkbox" 
-                  name="personal-data-processing" required>
-              <span class="input-checkbox__indicator"></span>
-              <span class="input-checkbox__text">
-                Даю согласие на
-                  <span class="input-checkbox__text-underline">
-                    обработку персональных данных
-                  </span>
-              </span>
-            </label>
-            <button class="modal__button-submit button 
-              button--light-orange reset-button" type="submit">
-              Отправить
-            </button>   
-          </form>
-        </dialog>
-        <dialog id="modalThanks" class="modal modal--text-thanks" data-js-cart-dialog-calc-thanks>
-          <button class="modal__close-button cross-button 
-            cross-button--rotated reset-button" type="button" 
-              onclick="modalThanks.close()">
-            <span class="modal__close-button-icon cross-icon 
-              cross-icon--big"></span>
-            <span class="visually-hidden">
-              Закрыть диалоговое окно
-            </span>
-          </button>
-          <div class="modal__wrapper">
-            <p class="modal__wrapper-description">
-              Спасибо!
-              <strong class="modal__wrapper-description
-                modal__wrapper-description--very-little">
-                Выша заявка принята, в ближайшее время наш менеджер с Вами
-                свяжется.
-              </strong> 
-            </p>
-          </div>
-        </dialog>
-        <dialog id="modalThanksMail" class="modal modal--text-thanks-mail" data-js-cart-dialog-mail-thanks>
-          <button class="modal__close-button cross-button 
-            cross-button--rotated reset-button" type="button" 
-              onclick="modalThanksMail.close()">
-            <span class="modal__close-button-icon cross-icon 
-              cross-icon--big"></span>
-            <span class="visually-hidden">
-              Закрыть диалоговое окно
-            </span>
-          </button>
-          <div class="modal__wrapper">
-            <p class="modal__wrapper-description">
-              Спасибо!
-              <strong class="modal__wrapper-description 
-                modal__wrapper-description--little">
-                Проверьте почтовый ящик!
-              </strong> 
-              <strong class="modal__wrapper-description
-                modal__wrapper-description--very-little">
-                На указанную почту была выслана подборка с выбранными товарами
-              </strong> 
-            </p>
-          </div>
-        </dialog>
+        </address>
       </div>
-    </section>
-    <p class="cart__empty-notification visually-hidden container">
-      <span>
-        Ваша корзина пуста
-      </span>
-      <a class="cart__empty-notification-link cart-products__link" href="catalog.html">
-        К покупкам
-      </a>
-    </p>
-  </main>
-  <footer class="footer">
-    <div class="footer__inner container"> 
-      <a class="footer__logo" href="index.html">
-        <img class="logo footer__logo-image" src="./images/logo-white.webp" 
-          alt="Логотип сайта I-LIGHTS - Эффективные решения" width="66" 
-            height="42" loading="lazy">
-      </a>
-      <p class="footer__copyright">
-        <span>©&nbsp;Technolight </span><!--
-        --><time datetime="2015-01-01">2015</time><!--
-        --><span>-</span><!--
-        --><time datetime="2021-12-31">2021</time>
-      </p>
-      <dl class="footer__navigation">
-        <div class="footer__navigation-block footer__catalog"> 
-          <dt class="footer__navigation-title footer__catalog-title">
-            <a class="footer__navigation-link" href="catalog.html">
-              Каталог товаров
-            </a>
-          </dt>
-          <dd class="footer__navigation-description 
-            footer__catalog-description">
-            <ul class="footer__navigation-list footer__catalog-list">
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Трековые светильники
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Встраиваемые светильники
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Профильные светильники
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Фигурные светильники
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Светильники Армстронг
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Армстронг с равномерной засветкой
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Произовдители
-                </a>
-              </li>
-            </ul>
-          </dd>
-        </div>
-        <div class="footer__navigation-block footer__ordering"> 
-          <dt class="footer__navigation-title footer__ordering-title">
-            <a class="footer__navigation-link" href="#">
-              Как заказать
-            </a>
-          </dt>
-          <dd class="footer__navigation-description 
-            footer__navigation-description">
-            <ul class="footer__navigation-list footer__ordering-list">
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Оплата
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Доставка
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Реквизиты компании
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  Правовая информация
-                </a>
-              </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </dd>
-        </div>
-        <div class="footer__navigation-block footer__contacts"> 
-          <dt class="footer__navigation-title footer__contacts-title">
-            <a class="footer__navigation-link" href="#">
-              Контакты
-            </a>
-          </dt>
-          <dd class="footer__navigation-description 
-            footer__contacts-description">
-            <address class="footer__address">
-              <ul class="footer__navigation-list footer__contacts-list">
-                <li class="footer__navigation-item">
-                  <a class="footer__address-link footer__address-link--place
-                    link-icon" href="#">
-                    <div class="link-icon__inner"> 
-                      <svg class="footer__address-icon 
-                        footer__address-icon--place link-icon__inner-icon  
-                          link-icon__inner-icon--light-orange" width="20" 
-                            height="20" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10 0a7.04 7.04 0 0 0-7.031 7.031c0 1.31.363 2.589 1.05 3.698l5.58 8.994a.586.586 0 0 0 .499.277h.004a.586.586 0 0 0 .498-.285l5.44-9.081a7.023 7.023 0 0 0 .991-3.603A7.04 7.04 0 0 0 10 0Zm5.034 10.032-4.945 8.256-5.075-8.177a5.852 5.852 0 0 1-.881-3.08A5.88 5.88 0 0 1 10 1.164c3.23 0 5.863 2.636 5.863 5.867 0 1.06-.29 2.097-.83 3.001Z" fill="#F3A800"/><path d="M10 3.516A3.52 3.52 0 0 0 6.484 7.03 3.511 3.511 0 0 0 10 10.547a3.509 3.509 0 0 0 3.516-3.516A3.52 3.52 0 0 0 10 3.516Zm0 5.867A2.353 2.353 0 0 1 7.648 7.03 2.36 2.36 0 0 1 10 4.68a2.357 2.357 0 0 1 2.348 2.351A2.349 2.349 0 0 1 10 9.383Z"/>
-                      </svg>
-                      <span class="link-icon__inner-label">
-                        Место магазина 
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li class="footer__navigation-item">
-                  <a class="footer__address-link footer__address-link--tel 
-                    link-icon" href="tel:+74952335557">
-                    <div class="link-icon__inner"> 
-                      <svg class="link-icon__inner-icon footer__address-icon
-                        footer__address-icon--tel link-icon__inner-icon--stroke 
-                          link-icon__inner-icon--light-orange" width="18" 
-                            height="18" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 3.43975C1 3.03091 1.16389 2.6388 1.45561 2.34971C1.74733 2.0606 2.143 1.89819 2.55556 1.89819H5.10667C5.26984 1.89831 5.42884 1.94929 5.56117 2.04391C5.69349 2.13852 5.79244 2.27199 5.844 2.42541L7.00911 5.88852C7.06814 6.06452 7.06116 6.25571 6.98944 6.42702C6.91773 6.59833 6.78608 6.73827 6.61867 6.82116L4.86322 7.69214C5.72369 9.57942 7.24902 11.091 9.15344 11.9438L10.0323 10.2041C10.116 10.0382 10.2572 9.90773 10.4301 9.83663C10.6029 9.76561 10.7959 9.75869 10.9734 9.81716L14.468 10.9718C14.6229 11.023 14.7577 11.1211 14.8532 11.2524C14.9487 11.3837 15 11.5414 15 11.7033V14.2306C15 14.6395 14.8361 15.0316 14.5444 15.3207C14.2527 15.6098 13.857 15.7722 13.4444 15.7722H12.6667C6.22356 15.7722 1 10.5956 1 4.21053V3.43975Z" stroke="#F3A800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg> 
-                      <span class="link-icon__inner-label">
-                        +7 (495) 233 55 57
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li class="footer__navigation-item">
-                  <a class="footer__address-link footer__address-link--mail
-                    link-icon" href="mailto:info@i-lights.ru">
-                    <div class="link-icon__inner">
-                      <svg class="link-icon__inner-icon footer__address-icon
-                        footer__address-icon--mail" viewBox="0 0 15 13" 
-                          width="18" height="16" 
-                            xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>
-                      </svg> 
-                      <span class="link-icon__inner-label">
-                        info@i-lights.ru
-                      </span> 
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </address>
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </footer>
-  <dialog id="mobileOverlay" class="mobile-overlay visible-tablet">
-    <form class="mobile-overlay__close-button-wrapper" method="dialog">
-      <button class="mobile-overlay__close-button cross-button 
-        cross-button--rotated reset-button" type="submit" onclick="document.body.style.overflow='auto'">
-        <span class="cross-icon cross-icon--big"></span>
-        <span class="visually-hidden">
-          Закрыть навигационное меню
-        </span>
-      </button>
-    </form>
-    <div class="mobile-overlay__body">
-      <ul class="mobile-overlay__list">
-        <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link" href="about-company.html">
-            О&nbsp;компании
-          </a>
-        </li>
-        <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link" href="company-services.html">Услуги</a>
-        </li>
-        <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link" href="#">Проекты</a>
-        </li>
-        <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link" href="about-ordering.html">Доставка и оплата</a>
-        </li>
-        <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link" href="#">Контакты</a>
-        </li>
-        <li class="mobile-overlay__item mobile-overlay__item--relative-left 
-          link-icon">
-          <a class="mobile-overlay__link link-icon__inner 
-            mobile-overlay__link--big" href="cart.html">
-            <span class="link-icon__inner-label  
-            link-icon__inner-label--light-yellow">
-              Подборка
-            </span>
-            <span class="mobile-overlay__link-icon link-icon__inner-icon 
-              link-icon__inner-icon--hover-bg cross-button">
-              <span class="cross-icon cross-icon--very-little"></span>
-            </span>
-          </a>
-        </li>
-      </ul>
-      <address class="mobile-overlay__contacts visible-mobile">
-        <ul class="mobile-overlay__contacts-list">
-          <li class="mobile-overlay__contacts-item">
-            <a class="mobile-overlay__email link-icon" 
-            href="mailto:info@i-lights.ru">
-            <div class="mobile-overlay__email-inner link-icon__inner">
-              <svg class="link-icon__inner-icon" width="15" height="13" 
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>              
-              </svg>            
-              <span class="link-icon__inner-label">info@i-lights.ru</span>   
-            </div>
-            </a>
-          </li>
-          <li class="mobile-overlay__contacts-item">
-            <a class="mobile-overlay__tel link-icon button button--little
-            button--little-pd button--dark-blue" href="tel:+74952335557">
-              <div class="mobile-overlay__tel-inner link-icon__inner">
-                <svg class="link-icon__inner-icon 
-                  link-icon__inner-icon--stroke" width="16" height="16" 
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a1)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a1"><path d="M0 0h16v16H0z"/></clipPath></defs>
-                </svg>
-                <span class="link-icon__inner-label">
-                  +7 (495) 233 55 57
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </address>
-    </div>
-  </dialog> 
-</body>
+    </dialog>
+  </body>
 </html>
