@@ -2201,7 +2201,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("../../i-lights/images/services/1.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/services/1.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(1)::after, .services__item:nth-child(1)::after {
@@ -2222,7 +2222,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("../../i-lights/images/services/2.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/services/2.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(2)::after, .services__item:nth-child(2)::after {
@@ -2243,7 +2243,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("../../i-lights/images/services/3.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/services/3.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(3)::after, .services__item:nth-child(3)::after {
@@ -2264,7 +2264,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("../../i-lights/images/services/4.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/services/4.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(4)::after, .services__item:nth-child(4)::after {
@@ -2285,7 +2285,7 @@ h4, .h4 {
   content: "";
   width: 41px;
   height: var(--servicesItemAfterHeigth);
-  background: url("../../i-lights/images/services/5.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/services/5.svg") no-repeat center/contain;
 }
 @media (width <= 64.06125rem) {
   .services__accordion:nth-child(5)::after, .services__item:nth-child(5)::after {
@@ -2925,7 +2925,7 @@ h4, .h4 {
   content: "";
   width: var(--downloadIconSize);
   height: var(--downloadIconSize);
-  background: url("../../i-lights/images/files/arrow-down.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/files/arrow-down.svg") no-repeat center/contain;
 }
 
 .files {
@@ -2959,7 +2959,7 @@ h4, .h4 {
   content: "";
   width: 133px;
   height: 133px;
-  background: url("../../i-lights/images/files/document.svg") center no-repeat;
+  background: url("../../I-lights/images/files/document.svg") center no-repeat;
 }
 @media (width <= 88.81125rem) {
   .files__header-title::before {
@@ -3218,7 +3218,7 @@ h4, .h4 {
   z-index: -1;
   width: 164px;
   height: 164px;
-  background: url("../../i-lights/images/feedback/question.svg") center no-repeat;
+  background: url("../../I-lights/images/feedback/question.svg") center no-repeat;
 }
 @media (width <= 71.93625rem) {
   .feedback__description::before {
@@ -3318,12 +3318,12 @@ h4, .h4 {
   width: 8px;
   height: 8px;
   z-index: 2;
-  background: url("../../i-lights/images/feedback/corner.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/feedback/corner.svg") no-repeat center/contain;
 }
 @media (width <= 47.99875rem) {
   .feedback__textarea-wrapper::after {
     bottom: 1px;
-    background-image: url("../../i-lights/images/feedback/corner-mobile.svg");
+    background-image: url("../../I-lights/images/feedback/corner-mobile.svg");
   }
 }
 @media (width <= 47.99875rem) {
@@ -4213,7 +4213,7 @@ h4, .h4 {
   content: "";
   width: 13px;
   aspect-ratio: 1;
-  background: url("../../i-lights/images/icons/filter.svg") no-repeat right/contain;
+  background: url("../../I-lights/images/icons/filter.svg") no-repeat right/contain;
 }
 @media (width <= 47.99875rem) {
   .filter__header {
@@ -4325,7 +4325,7 @@ h4, .h4 {
   width: 11px;
   height: 11px;
   color: var(--color-dark);
-  background: url("../../i-lights/images/icons/arrow-left.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/icons/arrow-left.svg") no-repeat center/contain;
   filter: invert(32%);
   transition-duration: var(--transition-duration);
 }
@@ -4480,7 +4480,7 @@ h4, .h4 {
   content: "";
   width: 8px;
   height: 9px;
-  background: url("../../i-lights/images/icons/ruble.svg") no-repeat center/contain;
+  background: url("../../I-lights/images/icons/ruble.svg") no-repeat center/contain;
 }
 
 .input-checkbox {
@@ -4498,7 +4498,7 @@ h4, .h4 {
   filter: brightness(80%);
 }
 .input-checkbox__default:focus-visible + .input-checkbox__indicator::after, .input-checkbox__default:hover + .input-checkbox__indicator::after, .input-checkbox__default:checked + .input-checkbox__indicator::after {
-  background: url("../../i-lights/images/icons/check-mark.svg") center/contain no-repeat;
+  background: url("../../I-lights/images/icons/check-mark.svg") center/contain no-repeat;
   background-size: 8.5px 6.5px;
 }
 @media (width <= 47.99875rem) {
@@ -4839,7 +4839,7 @@ h4, .h4 {
   content: "";
   width: 10px;
   height: 10px;
-  background: url("./../../i-lights/images/icons/arrow-left.svg") no-repeat center/contain;
+  background: url("./../../I-lights/images/icons/arrow-left.svg") no-repeat center/contain;
   filter: invert(70%);
   transition-duration: var(--transition-duration);
 }
@@ -5343,7 +5343,7 @@ h4, .h4 {
   content: "";
   width: 10px;
   height: 7px;
-  background: url("../../i-lights/images/icons/check-mark.svg");
+  background: url("../../I-lights/images/icons/check-mark.svg");
 }
 .cart-item__price {
   width: -moz-fit-content;

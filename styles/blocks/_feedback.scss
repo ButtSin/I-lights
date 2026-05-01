@@ -48,7 +48,7 @@
 
       @include square(164px);
 
-      background: url("../../i-lights/images/feedback/question.svg") center
+      background: url("../../I-lights/images/feedback/question.svg") center
         no-repeat;
 
       @include desktop-s {
@@ -163,13 +163,13 @@
       height: 8px;
       z-index: 2;
 
-      background: url("../../i-lights/images/feedback/corner.svg") no-repeat
+      background: url("../../I-lights/images/feedback/corner.svg") no-repeat
         center / contain;
 
       @include tablet-s {
         bottom: 1px;
 
-        background-image: url("../../i-lights/images/feedback/corner-mobile.svg");
+        background-image: url("../../I-lights/images/feedback/corner-mobile.svg");
       }
     }
 
